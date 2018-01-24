@@ -1,0 +1,16 @@
+name: kliekske
+type: theme
+description: 'Voor het toneel gezelschap het Kliekske'
+base theme: classy
+package: Custom
+core: 8.x
+version: 1.0.0
+libraries:
+  - kliekske/globalstyle
+  - kliekske/globaljs
+
+regions:
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  footer: Footer

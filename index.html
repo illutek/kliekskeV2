@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boilerplate Drupal8 Theme</title>
+    <style>
+        body {
+            margin: 0;
+            line-height: 1.7em;
+            font-family: "DejaVu Sans", sans-serif;
+        }
+
+        header {
+            color: #ffffff;
+            background: dodgerblue;
+            padding: 50px 0;
+        }
+        .header-inner {
+            width: 950px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .logo {
+            float: left;
+            margin-right: 50px;
+        }
+
+        .title {
+            margin-top: 55px;
+        }
+
+        .code {
+            background: lightgray;
+            padding: 10px;
+        }
+
+        #content {
+            width: 950px;
+            margin: 75px auto;
+        }
+
+        footer {
+            color: white;
+            background: dodgerblue;
+            padding: 35px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/d8.png" alt="Drupal8 logo">
+        </div>
+        <div class="title">
+            <h1>illutek Boilerplate For Drupal8</h1>
+        </div>
+    </div>
+
+
+</header>
+<section id="content">
+    <h2>Boilerplate Drupal8 theme</h2>
+    <p>Dit als een start punt voor het opzetten van een Drupal8 theme, na het uitvoeren van onderstaande nog wel de
+        verwijzingen naar de libraries in het info.yml aanpassen naar de theme naam, na dit alles zou dit een werkende
+        theme moeten opleveren (theme plaatsen in /themes/custom/yourtheme)
+    </p>
+    <h3>Instalatie</h3>
+    <p>Installeer het theme met</p>
+
+    <span class="code">
+         git clone git@github.com:illutek/theme-directory.git yourtheme
+    </span>
+
+    <p>Naar de directory yourtheme</p>
+    <span class="code">
+        cd yourtheme
+    </span>
+
+    <p>Installeer alle dev dependencies met</p>
+    <span class="code">
+       yarn install
+    </span>
+
+    <p>of</p>
+    <span class="code">
+        npm install
+    </span>
+
+    <p>Hernoem illutek.theme naar yourtheme.theme</p>
+    <span class="code">
+        mv illutek.theme yourtheme.theme
+    </span>
+
+    <p>Hernoem illuetk.libraries.yml naar yourtheme.libraries.yml</p>
+    <span class="code">
+         mv illutek.libraries.yml yourtheme.libraries.yml
+    </span>
+
+    <p>Hernoem illutek.info.yml naar yourtheme.info.yml</p>
+    <span class="code">
+        mv illutek.info.yml yourtheme.info.yml
+    </span>
+
+    <p>Instaleer theme dependencies met bower</p>
+    <span class="code">
+       bower install
+    </span>
+
+    <p>De dist directory en css aanmaken met</p>
+    <span class="code">
+        yarn start
+    </span>
+
+    <p>of met</p>
+    <span class="code">
+        gulp
+    </span>
+
+    <p>Yarn als componenten manager voor dev modules
+        Gulp als automation tool (commando 'yarn start' of met 'gulp' start gulp op ), er wordt een dist folder
+        aangemaakt.
+    </p>
+
+</section>
+<footer>
+    &copy; 2017
+</footer>
+
+</body>
+</html>
