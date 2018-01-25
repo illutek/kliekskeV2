@@ -42,13 +42,14 @@
  * @see html.html.twig
  */
 #}
+
+{% include directory ~ '/templates/partials/header.html.twig' %}
+
 <div class="row">
 
   <div class="layout-container">
 
-    <header role="banner">
-      {{ page.header }}
-    </header>
+    
 
     {{ page.primary_menu }}
     {{ page.secondary_menu }}
@@ -68,11 +69,7 @@
 
     </main>
 
-    {% if page.footer %}
-      <footer role="contentinfo">
-        {{ page.footer }}
-      </footer>
-    {% endif %}
+    {% include directory ~ '/templates/partials/footer.html.twig' %}
 
   </div>{# /.layout-container #}
 

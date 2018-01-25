@@ -2,130 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Boilerplate Drupal8 Theme</title>
-    <style>
-        body {
-            margin: 0;
-            line-height: 1.7em;
-            font-family: "DejaVu Sans", sans-serif;
-        }
-
-        header {
-            color: #ffffff;
-            background: dodgerblue;
-            padding: 50px 0;
-        }
-        .header-inner {
-            width: 950px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .logo {
-            float: left;
-            margin-right: 50px;
-        }
-
-        .title {
-            margin-top: 55px;
-        }
-
-        .code {
-            background: lightgray;
-            padding: 10px;
-        }
-
-        #content {
-            width: 950px;
-            margin: 75px auto;
-        }
-
-        footer {
-            color: white;
-            background: dodgerblue;
-            padding: 35px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>'t Kliekske'</title>
 </head>
 <body>
-<header>
-    <div class="header-inner">
-        <div class="logo">
-            <img src="images/d8.png" alt="Drupal8 logo">
+ 
+    <section class="navigation">
+        <ul class="navigation__List">
+            <li class="navigation__item">Home</li>
+            <li class="navigation__item">Sponsors</li>
+            <li class="navigation__item">Spelende leden</li>
+            <li class="navigation__item">Programma</li>
+            <li class="navigation__item">Nieuws</li>
+        </ul>
+    </section>
+    <header class="header">
+        <div class="header__logo-box">
+            <img src="logo.png" alt="" class="header__logo">
         </div>
-        <div class="title">
-            <h1>illutek Boilerplate For Drupal8</h1>
+
+        <div class="header__title-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">'t Kliekske</span>
+                <span class="heading-primary--sub">Lachen is gezond</span>
+            </h1>
+            <a href="#" class="btn btn--white btn--animated">
+                    Ons Programma
+            </a>
         </div>
-    </div>
 
+    </header>
 
-</header>
-<section id="content">
-    <h2>Boilerplate Drupal8 theme</h2>
-    <p>Dit als een start punt voor het opzetten van een Drupal8 theme, na het uitvoeren van onderstaande nog wel de
-        verwijzingen naar de libraries in het info.yml aanpassen naar de theme naam, na dit alles zou dit een werkende
-        theme moeten opleveren (theme plaatsen in /themes/custom/yourtheme)
-    </p>
-    <h3>Instalatie</h3>
-    <p>Installeer het theme met</p>
+    <section class="welcome">
+      <div class="row">
+          <h2 class="heading-second">
+                Welkom bij het toneelgezelschap ‘t Klieksk
+          </h2>
 
-    <span class="code">
-         git clone git@github.com:illutek/theme-directory.git yourtheme
-    </span>
+      </div>
+    </section>
 
-    <p>Naar de directory yourtheme</p>
-    <span class="code">
-        cd yourtheme
-    </span>
+    <section class="cards">
+        <div class="row">
+            Cards
 
-    <p>Installeer alle dev dependencies met</p>
-    <span class="code">
-       yarn install
-    </span>
+        </div>
+    </section>
 
-    <p>of</p>
-    <span class="code">
-        npm install
-    </span>
+    <section class="sponsors">
+        <div class="row">
+            Sponsors
 
-    <p>Hernoem illutek.theme naar yourtheme.theme</p>
-    <span class="code">
-        mv illutek.theme yourtheme.theme
-    </span>
+        </div>
+    </section>
 
-    <p>Hernoem illuetk.libraries.yml naar yourtheme.libraries.yml</p>
-    <span class="code">
-         mv illutek.libraries.yml yourtheme.libraries.yml
-    </span>
+    <section class="contact">
+        <div class="row">
+            Contact
 
-    <p>Hernoem illutek.info.yml naar yourtheme.info.yml</p>
-    <span class="code">
-        mv illutek.info.yml yourtheme.info.yml
-    </span>
+        </div>
+    </section>
 
-    <p>Instaleer theme dependencies met bower</p>
-    <span class="code">
-       bower install
-    </span>
+    <footer class="footer">
+        <div class="row">
+          Footer
 
-    <p>De dist directory en css aanmaken met</p>
-    <span class="code">
-        yarn start
-    </span>
-
-    <p>of met</p>
-    <span class="code">
-        gulp
-    </span>
-
-    <p>Yarn als componenten manager voor dev modules
-        Gulp als automation tool (commando 'yarn start' of met 'gulp' start gulp op ), er wordt een dist folder
-        aangemaakt.
-    </p>
-
-</section>
-<footer>
-    &copy; 2017
-</footer>
-
+        </div>
+    </footer>
+    
+    
 </body>
 </html>

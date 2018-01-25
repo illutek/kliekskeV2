@@ -1,0 +1,26 @@
+// /////////////////////////
+// @@ HEADER
+// ////////////////////////
+
+.header {
+  position: relative;
+  height: 75vh;
+
+  &__logo-box {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &__logo {
+
+  }
+
+  &__title-box {
+    top: 35%;
+    left: 50%;
+    @include center(both);
+    text-align: center;
+  }
+}
+
