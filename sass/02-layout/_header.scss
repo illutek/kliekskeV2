@@ -1,10 +1,27 @@
-// /////////////////////////
+/////////////////////////
 // @@ HEADER
 // ////////////////////////
+
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);  
+    height: 75vh;
+  }
+}
 
 .header {
   position: relative;
   height: 75vh;
+  background: linear-gradient(
+    to left bottom, 
+    rgba($color-yellow, 0.5), 
+    rgba($color-yellow-saturat, 0.5)), 
+    url("../images/aanzoek-van-Anton.jpg");
+  background-size: cover;
+  background-position: bottom;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
 
   &__logo-box {
     position: absolute;
@@ -15,6 +32,17 @@
   &__logo {
 
   }
+
+  &__menubtn-box {
+    position: fixed;
+    right: 5rem;
+    top: 5rem;
+    height: 6.4rem;
+    width: 6.4rem;
+    background: $color-white;
+    z-index: 999;
+  }
+
 
   &__title-box {
     top: 35%;

@@ -37,6 +37,16 @@
     transform: translate(-50%, -50%);
   }
 }
+
+// GRID
+// ////////////////////////
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
   
 
 

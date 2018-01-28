@@ -1,0 +1,21 @@
+// /////////////////////////
+// @@ BUTTONS
+// ////////////////////////
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    padding: 3rem 6rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+
+.btn--white {
+    background: $color-white;
+    color: $color-blackleather;
+    text-transform: uppercase;
+}

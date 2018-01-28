@@ -3,5 +3,35 @@
 // ////////////////////////
 
 body {
-  font-size: 1.6rem;
+  color: $color-blackleather;
+  font: {
+    family: 'Roboto', sans-serif;
+    size: 1.6rem;
+  }
+}
+
+
+
+.heading-primary {
+  margin-bottom: 4rem;
+}
+
+.heading-primary--main {
+  display: block;
+  color: $color-white;
+  letter-spacing: 2rem;
+  font: {
+    size: 8rem;
+    weight: 400;
+  }
+}
+
+.heading-primary--sub {
+  display: block;
+  color: $color-white;
+  letter-spacing: 1rem;
+  font: {
+    size: 5rem;
+    weight: 400;
+  }
 }
