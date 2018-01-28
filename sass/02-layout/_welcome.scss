@@ -1,0 +1,20 @@
+/////////////////////////
+// @@ WELCOME
+// ////////////////////////
+
+.welcome {
+  background: $color-platinum;
+  margin-top: -10vh;
+  padding: 19rem 0;
+
+  &__box {
+    
+  }
+
+  &__body {
+    min-height: 38rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

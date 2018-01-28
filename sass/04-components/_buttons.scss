@@ -6,10 +6,25 @@
   &,
   &:link,
   &:visited {
-    padding: 3rem 6rem;
+    position: relative;
+    padding: 2rem 6rem;
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
+    border: none;
+    transition: all .3s;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
   }
 }
 
