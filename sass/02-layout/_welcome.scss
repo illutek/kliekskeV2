@@ -7,6 +7,10 @@
   margin-top: -20vh;
   padding: 20rem 0;
 
+  @include respond(phone) {
+    margin-top: -10vh;
+  }
+
   &__box {
     
   }

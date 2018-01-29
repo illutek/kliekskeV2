@@ -15,13 +15,21 @@
   height: 95vh;
   background: linear-gradient(
     to left bottom, 
-    rgba($color-yellow, 0.5), 
-    rgba($color-yellow-saturat, 0.5)), 
+    rgba($color-yellow, 0.7), 
+    rgba($color-yellow-saturat, 0.7)), 
     url("../images/aanzoek-van-Anton.jpg");
   background-size: cover;
   background-position: bottom;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    height: 85vh;
+  }
+
+  @include respond(smallest-phone) {
+    height: 65vh;
+  }
 
   &__logo-box {
     position: absolute;
@@ -31,10 +39,22 @@
 
   &__logo {
 
+    @include respond(tab-land) {
+      width: 90%;
+    }
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
     @include respond(phone) {
       width: 55%;
-
     }
+
+    @include respond(smallest-phone) {
+      width: 45%;
+    }
+
 
   }
 
