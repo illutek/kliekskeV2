@@ -6,7 +6,7 @@
   &,
   &:link,
   &:visited {
-    position: relative;
+    // position: relative;
     padding: 2rem 6rem;
     display: inline-block;
     cursor: pointer;
@@ -30,7 +30,22 @@
 
 
 .btn--white {
-    background: $color-white;
-    color: $color-blackleather;
-    text-transform: uppercase;
+  background: $color-white;
+  color: $color-blackleather;
+  text-transform: uppercase;
+}
+
+.btn--yellow {
+  background: $color-yellow-saturat;
+  color: $color-blackleather;
+}
+
+.btn--blue {
+  background: $color-blue;
+  color: $color-white;
+}
+
+.btn--red {
+  background: $color-red-saturat;
+  color: $color-white;
 }

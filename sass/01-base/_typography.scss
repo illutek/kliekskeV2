@@ -82,3 +82,14 @@ p {
     font-size: 3.5rem;
   }
 }
+
+.heading-tertiary {
+  display: block;
+  color: $color-blackleather;
+  font: {
+    size: 3rem;
+    weight: 300;
+  }
+  text-align: center;
+  margin-bottom: 2.5rem;
+}

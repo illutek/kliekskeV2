@@ -1,0 +1,42 @@
+// /////////////////////////
+// @@ CARD REGION
+// ////////////////////////
+
+.cards {
+    margin-top: -12vh;
+    padding: 20rem 0;
+    background: linear-gradient(
+        to left bottom,
+        rgba($color-blue, .9),
+        rgba($color-blue-saturat, .9)),
+        url("../images/Mariette-met-brief.jpg");
+        background-size: cover;
+        transform: skewY(-7deg);
+
+        & > * {
+            transform: skewY(7deg);
+        }
+
+}
+
+.card {
+    background: rgba($color-white, .5);
+    min-height: 45rem;
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__one {
+
+    }
+
+    &__two {
+
+    }
+
+    &__three {
+
+    }
+}
