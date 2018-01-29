@@ -3,11 +3,9 @@
 // ////////////////////////
 
 .navigation {
-  // display: none;
 
   &__checkbox {
     display: none;
-
   }
 
   &__button {
@@ -69,14 +67,12 @@
 
   &__list {
     @include center(both);
-    list-style: none;
-     text-align: center;
+      list-style: none;
+      text-align: center;
    }
  
    &__item {
      margin: 1rem;
- 
- 
    }
  
    &__link {
@@ -84,9 +80,9 @@
      &:visited {
        display: inline-block;
        font-size: 3rem;
-       font-weight: 300;
+       font-weight: 100;
        color: $color-white;
-       padding: 1rem 2rem;
+       padding: 1rem 5rem;
        text-decoration: none;
        text-transform: uppercase;
        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
@@ -160,7 +156,6 @@
   &__checkbox:checked + &__button &__icon {
     // display: none; geen optie before and after zijn afhankelijk
     //display: none;
-
     background-color: transparent;
   }
 
