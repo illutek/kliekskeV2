@@ -12,7 +12,7 @@
 
 .header {
   position: relative;
-  height: 75vh;
+  height: 95vh;
   background: linear-gradient(
     to left bottom, 
     rgba($color-yellow, 0.5), 
@@ -20,8 +20,8 @@
     url("../images/aanzoek-van-Anton.jpg");
   background-size: cover;
   background-position: bottom;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
     position: absolute;
@@ -31,19 +31,11 @@
 
   &__logo {
 
-  }
+    @include respond(phone) {
+      width: 55%;
 
-  &__menubtn-box {
-    position: fixed;
-    right: 5rem;
-    top: 5rem;
-    height: 6.4rem;
-    width: 6.4rem;
-    background: $color-white;
-    z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.1);
-    cursor: pointer;
-    text-align: center;
+    }
+
   }
 
 
