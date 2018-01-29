@@ -23,12 +23,18 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+  @include respond(tab-port) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+  }
+
   @include respond(phone) {
-    height: 85vh;
+    height: 70vh;
   }
 
   @include respond(smallest-phone) {
-    height: 65vh;
+    height: 55vh;
   }
 
   &__logo-box {

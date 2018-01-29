@@ -77,4 +77,8 @@ p {
   }
   text-align: center;
   margin-bottom: 3rem;
+
+  @include respond(smallest-phone) {
+    font-size: 3.5rem;
+  }
 }
