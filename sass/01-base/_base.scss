@@ -22,7 +22,7 @@ html {
   }
 
   @include respond(tab-port) {  // width < 900px?
-    font-size: 50%;  // 1rem = 8px, 8/16px = 50%
+    font-size: 55%;  // 1rem = 8px, 8/16px = 50%
   }
 
   @include respond(big-desktop) {  // width > 1800px?
