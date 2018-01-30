@@ -1,0 +1,28 @@
+// /////////////////////////
+// @@  SPONSORS REGION
+// ////////////////////////
+
+.contact {
+  background-color: $color-black;
+  padding: 20rem 0;
+  margin: 5rem 0;
+  color: $color-white;
+
+  &__box {
+    background-image: linear-gradient(105deg,transparent 50%, rgba(255,255,255,.9) 0,rgba(255,255,255,.9) 100%),url(../images/contact-bcg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 71rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__form {
+
+  }
+
+  &__details {
+    
+  }
+
+}
