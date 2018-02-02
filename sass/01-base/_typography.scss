@@ -93,3 +93,13 @@ p {
   text-align: center;
   margin-bottom: 2.5rem;
 }
+
+.heading-fourth {
+  display: block;
+  color: $color-blackleather;
+  font: {
+    size: 2.4rem;
+    weight: 300;
+  }
+  margin-bottom: 2rem;
+}
