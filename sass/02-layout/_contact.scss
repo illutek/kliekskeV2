@@ -14,12 +14,21 @@
     min-height: 40rem;
     display: flex;
     justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+      background-image: linear-gradient(90deg,transparent 0%, rgba(255,255,255,.7) 0,rgba(255,255,255,.7) 100%),url(../images/samen_groeten.jpg);
+    }
   }
 
   &__form {
     padding: 5rem 0;
     width: 40%;
 
+    @include respond(phone) {
+      padding: 4rem;
+      width: 100%;
+    }
   }
 
 
@@ -28,6 +37,12 @@
     width: 30%;
     text-align: right;
     padding: 3rem;
+
+    @include respond(phone) {
+      text-align: left;
+      padding: 3rem;
+      width: 100%;
+    }
 
   }
 
