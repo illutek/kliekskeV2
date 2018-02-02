@@ -14,11 +14,12 @@
   }
 
   @include respond(tab-port) {
-    max-width: 50rem;
+    max-width: 95rem;
     padding: 0 3rem;
   }
 
   @include respond(phone) {
+    max-width: 55rem;
     padding: 0 3rem;
   }
 
@@ -31,13 +32,18 @@
       margin-right: $gutter-horizontal;
 
       @include respond(tab-port) {
+        margin-right: 5rem;
+        margin-bottom: $gutter-vertical--small;
+      }
+
+      @include respond(phone) {
         margin-right: 0;
         margin-bottom: $gutter-vertical--small;
       }
 
     }
-
-    @include respond(tab-port) {
+    // breakpoint 
+    @include respond(phone) {
       width: 100% !important;
     }
 
