@@ -10,7 +10,7 @@
   &__box {
     background-image: linear-gradient(105deg,transparent 50%, rgba(255,255,255,.9) 0,rgba(255,255,255,.9) 100%),url(../images/samen_groeten.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
     min-height: 40rem;
     display: flex;
     justify-content: space-around;
@@ -28,6 +28,7 @@
     @include respond(phone) {
       padding: 4rem;
       width: 100%;
+      order: 2;
     }
   }
 
@@ -42,6 +43,7 @@
       text-align: left;
       padding: 3rem;
       width: 100%;
+      order: 1;
     }
 
   }

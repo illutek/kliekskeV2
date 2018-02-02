@@ -26,7 +26,6 @@
     color: $color-blackleather;
     padding: 3rem;
     transform: skewX(-10deg);
-    margin-bottom: 4rem;
 
     & > * {
       transform: skewX(10deg);
@@ -44,6 +43,7 @@
   &__content {}
 
   &__footer {
-    text-align: center;
+    
+    
   }
 }

@@ -7,5 +7,34 @@
   margin: -10rem 0;
   padding: 26rem 0;
   min-height: 55rem;
+
+  &__box {
+    
+  }
+
+  &__items {
+    column-count: 3;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 14rem;
+
+    @include respond(phone) {
+      column-count: 1;
+      padding-left: 0;
+    }
+
+  }
+
+  &__item {
+    text-decoration: none;
+    font-size: 2rem;
+    color: $color-blackleather;
+    line-height: 2;
+    transition: all .3s;
+
+    &:hover {
+      color:$color-blue;
+    }
+  }
       
 }
