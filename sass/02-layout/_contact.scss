@@ -9,21 +9,26 @@
   color: $color-white;
 
   &__box {
-    background-image: linear-gradient(105deg,transparent 50%, rgba(255,255,255,.9) 0,rgba(255,255,255,.9) 100%),url(../images/contact-bcg.jpg);
+    background-image: linear-gradient(105deg,transparent 50%, rgba(255,255,255,.9) 0,rgba(255,255,255,.9) 100%),url(../images/samen_groeten.jpg);
     background-size: cover;
-    background-position: bottom;
-    min-height: 71rem;
+    background-position: top;
+    min-height: 40rem;
     display: flex;
     justify-content: space-around;
   }
 
   &__form {
     padding: 5rem 0;
+    width: 40%;
 
   }
 
 
   &__details {
+    color: $color-blackleather;
+    width: 30%;
+    text-align: right;
+    padding: 3rem;
 
   }
 
