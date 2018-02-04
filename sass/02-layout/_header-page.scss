@@ -1,0 +1,28 @@
+/////////////////////////
+// @@ HEADER PAGE
+// ////////////////////////
+
+.header-page {
+  position: relative;
+  height: 15vh;
+  background: linear-gradient(
+    to left bottom, 
+    rgba(#838383, 1), 
+    rgba(#838383, 1));
+  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &__title-box {
+    top: 35%;
+    left: 50%;
+    @include center(both);
+    // text-align: center;
+  }
+
+}
