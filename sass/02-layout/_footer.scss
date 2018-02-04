@@ -9,14 +9,20 @@
   color: $color-platinum;
   margin: 5rem 0;
 
+  &__box {
+    display: flex;
+    flex-direction: row;
+  }
+
 
   &__logo-box {
+    width: 25vw;
     margin-top: -3rem;
-
   }
 
 
   &__menu {
+    width: 25vw;
     border-left: solid 1px $color-platinum;
     padding: 0 2.5rem;
 
@@ -33,6 +39,7 @@
 
   &__sponsors {
     text-align: right;
+    width: 25vw;
 
     &__img {
       width: 7.5rem;
@@ -41,8 +48,10 @@
   }
 
   &__social {
+    width: 25vw;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-end;
   }
 
