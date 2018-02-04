@@ -26,26 +26,25 @@
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
   }
-}
 
-
-.btn--white {
+  &--white {
   background: $color-white;
   color: $color-blackleather;
   text-transform: uppercase;
-}
+  }
 
-.btn--yellow {
-  background: $color-yellow-saturat;
-  color: $color-blackleather;
-}
+  &--yellow {
+    background: $color-yellow-saturat;
+    color: $color-blackleather;
+  }
 
-.btn--blue {
-  background: $color-blue;
-  color: $color-white;
-}
+  &--blue {
+    background: $color-blue;
+    color: $color-white;
+  }
 
-.btn--red {
-  background: $color-red-saturat;
-  color: $color-white;
+  &--red {
+    background: $color-red-saturat;
+    color: $color-white;
+  }
 }

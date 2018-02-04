@@ -5,23 +5,52 @@
 .footer {
   background-color: $color-black;
   min-height: 30rem;
-  padding: 4rem 0;
+  padding: 6rem 0;
   color: $color-platinum;
+  margin: 5rem 0;
+
 
   &__logo-box {
+    margin-top: -3rem;
 
   }
 
 
   &__menu {
+    border-left: solid 1px $color-platinum;
+    padding: 0 2.5rem;
+
+    &__item {
+      text-decoration: none;
+      color: $color-platinum;
+
+      &:hover {
+        transform: translateX(.5rem);
+      }
+    }
 
   }
 
   &__sponsors {
+    text-align: right;
+
+    &__img {
+      width: 7.5rem;
+    }
 
   }
 
   &__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
+  &__copyright {
+    font-size: 1rem;
+  }
+
+  .social__img {
+    width: 2.8rem;
   }
 }
