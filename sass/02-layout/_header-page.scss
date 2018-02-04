@@ -4,13 +4,13 @@
 
 .header-page {
   position: relative;
-  height: 15vh;
+  height: 17vh;
   background: linear-gradient(
     to left bottom, 
-    rgba(#838383, 1), 
-    rgba(#838383, 1));
-  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    rgba($color-gray, 1), 
+    rgba($color-gray, 1));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 13vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 13vh, 0 100%);
 
   &__logo-box {
     position: absolute;
