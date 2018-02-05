@@ -29,12 +29,16 @@
       top: 3rem;
       right: 3rem;
     }
+
+    @include respond(small-phone) {
+      height: 5rem;
+      width: 5rem;
+    }
   }
 
   &__background {
     height: 6rem;
     width: 6rem;
-    // border-radius: 50%;
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
@@ -51,6 +55,12 @@
       top: 3.5rem;
       right: 3.5rem;
     }
+
+    @include respond(small-phone) {
+      height: 4rem;
+      width: 4rem;
+    }
+
   }
 
   &__nav {
@@ -116,6 +126,10 @@
   &__icon {
     position: relative;
     transform: translateY(3.5rem);
+
+    @include respond(small-phone) {
+      transform: translateY(2.5rem);
+    }
 
 
     &,

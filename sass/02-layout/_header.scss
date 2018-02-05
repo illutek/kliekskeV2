@@ -48,6 +48,10 @@
     left: 50%;
     @include center(both);
     text-align: center;
+
+    @include respond(phone) {
+      top: 60%;
+    }
   }
 }
 
