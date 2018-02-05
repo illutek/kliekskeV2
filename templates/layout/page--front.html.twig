@@ -43,35 +43,21 @@
  */
 #}
 
+{% include directory ~ '/templates/partials/navigation.html.twig' %}
+
 {% include directory ~ '/templates/partials/header.html.twig' %}
 
-<div class="row">
+<main>
 
-  <div class="layout-container">
+  {% include directory ~ '/templates/partials/welcome.html.twig' %}
 
-    
+  {% include directory ~ '/templates/partials/cards.html.twig' %}
 
-    {{ page.primary_menu }}
-    {{ page.secondary_menu }}
+  {% include directory ~ '/templates/partials/sponsors.html.twig' %}
 
-    {{ page.breadcrumb }}
+  {% include directory ~ '/templates/partials/contact.html.twig' %}
 
-    {{ page.highlighted }}
+  {% include directory ~ '/templates/partials/footer.html.twig' %}
 
-    {{ page.help }}
-
-    <main role="main">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-      <div class="layout-content">
-        {{ page.content }}
-      </div>{# /.layout-06-content #}
-
-    </main>
-
-    {% include directory ~ '/templates/partials/footer.html.twig' %}
-
-  </div>{# /.layout-container #}
-
-</div>
+</main>
 

@@ -42,6 +42,28 @@
  * @see html.html.twig
  */
 #}
+
+{% include directory ~ '/templates/partials/navigation.html.twig' %}
+
+{% include directory ~ '/templates/partials/header-page.html.twig' %}
+
+<main>
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+
+  {% include directory ~ '/templates/partials/page-main-content.html.twig' %}
+
+  {% include directory ~ '/templates/partials/footer.html.twig' %}
+
+</main>
+
+
+
+
 <div class="row">
 
   <div class="layout-container">
