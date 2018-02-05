@@ -12,12 +12,30 @@
   &__box {
     display: flex;
     flex-direction: row;
+
+    @include respond(phone) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
 
   &__logo-box {
     width: 25vw;
     margin-top: -3rem;
+
+    @include respond(phone) {
+      margin-bottom: 3rem;
+      order: 0;
+    }
+
+    @include respond(small-phone) {
+      width: 40vw;
+    }
+
+    @include respond(smallest-phone) {
+      width: 55vw;
+    }
   }
 
 
@@ -25,6 +43,11 @@
     width: 25vw;
     border-left: solid 1px $color-platinum;
     padding: 0 2.5rem;
+
+    @include respond(phone) {
+      margin-bottom: 3rem;
+      order: 1;
+    }
 
     &__item {
       text-decoration: none;
@@ -41,6 +64,11 @@
     text-align: right;
     width: 25vw;
 
+    @include respond(phone) {
+      order: 2;
+    }
+    
+
     &__img {
       width: 7.5rem;
     }
@@ -53,6 +81,10 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+
+    @include respond(phone) {
+      order: 3;
+    }
   }
 
   &__copyright {
