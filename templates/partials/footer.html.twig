@@ -9,7 +9,9 @@
     <div class="footer__box">
 
       <div class="footer__logo-box">
-          <img src="logo.png" alt="Logo 't Kliekske" class="logo--footer">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+          <img src="{{ base_path ~ directory }}/logo.png" alt="Logo Kliekske" class="logo--footer">
+        </a>      
       </div>
 
       <div class="footer__menu">
@@ -26,7 +28,7 @@
 
       <div class="footer__social">
           <div class="footer__social-box">
-              <a href="#"><img class="social__img" src="images/facebook.png" alt="Facebook Kliekske"></a>                
+              <a href="#"><img class="social__img" src="{{ base_path ~ directory }}/images/facebook.png" alt="Facebook Kliekske"></a>                
           </div>
           <div class="footer__copyright">
               &copy; 't Kliekske | 2018

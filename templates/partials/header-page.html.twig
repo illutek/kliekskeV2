@@ -6,21 +6,14 @@
 
 <header class="header-page">
   <div class="header-page__logo-box">
-    <a href="index.html">
-      <img src="logo.png" alt="" class="logo--page">
-    </a>
-      
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+      <img src="{{ base_path ~ directory }}/logo.png" alt="Logo Kliekske" class="logo--page">
+    </a>      
   </div>
-
-  <!-- <div class="header__menubtn-box">
-      
-  </div> -->
 
   <div class="header-page__title-box">
     <h1 class="heading-primary">
         <span class="heading-primary--page">'tKliekske</span>
-    </h1>
-      
+    </h1>      
   </div>
-
 </header>
