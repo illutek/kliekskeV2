@@ -12,4 +12,5 @@ libraries:
 regions:
   content: Content
   welcome: "Welkom tekst"
+  sponsors: Sponsors
   footer-sponsors: "Footer Sponsors"
