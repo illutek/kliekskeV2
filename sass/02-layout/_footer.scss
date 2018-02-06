@@ -73,7 +73,17 @@
       width: 7.5rem;
     }
 
+    &__slider {
+      width: 7.5rem;
+      margin-left: 65%;
+
+      @include respond(phone) {
+        margin-left: 35%;
+      }
+    }
+
   }
+
 
   &__social {
     width: 25vw;
