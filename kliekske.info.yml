@@ -10,7 +10,6 @@ libraries:
   - kliekske/globaljs
 
 regions:
-  header: Header
   content: Content
-  sidebar: Sidebar
-  footer: Footer
+  welcome: "Welkom tekst"
+  footer-sponsors: "Footer Sponsors"

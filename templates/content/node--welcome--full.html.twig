@@ -1,0 +1,65 @@
+{#
+/**
+ * Node--full block region creaded with views
+ *  
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes.addClass('heading-secondary') }}>
+      {{ label }}
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+
+  <div{{ content_attributes.addClass('row') }}>
+    <div class="col-1-of-2">
+      <div class="welcome__body">{{ content.body }}</div>
+    </div>
+
+    <div class="col-1-of-2">
+    {# TODO class u-shadow add to img #}
+      <div class="welcome__img">{{ content.field_welcome_img }}</div>
+    </div>
+    
+  </div>
+
+</article>
+
+
+{# The HTML component
+
+<h2 class="heading-secondary">
+        Welkom bij het toneelgezelschap ‘t Klieksk
+</h2>
+<div class="row">
+    <!-- vanaf hier in html.twig file -->
+  <div class="col-1-of-2">
+    <div class="welcome__body">
+      <p>We zijn een jonge, dynamische toneelgroep, opgericht in februari 2014. We willen blijspelen en komedies opvoeren, 
+          met als motto “lachen is gezond !”</p>
+      <p>Je kan ons het best vergelijken met een goede wijn : Alle ingrediënten samen zorgen namelijk voor een pittige 
+          smaak, een kruidig kleur- en geluids-pallet, maar toch ook voor een zachte afdronk.
+      </p>
+    </div>
+  </div>
+  <div class="col-1-of-2">
+    <div class="welcome__img">
+      <img class="u-shadow" src="images/samen_groeten.jpg" alt="Leden Kliekske">
+    </div>
+  </div>        
+</div>#}
