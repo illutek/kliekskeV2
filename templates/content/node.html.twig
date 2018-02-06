@@ -73,6 +73,7 @@
 {%
   set classes = [
     'node',
+    'content-page',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -83,17 +84,21 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
+<div class="content-page__box">
+
+ {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    <h2{{ title_attributes.addClass('heading-secondary') }}>
+      {{ label }}
     </h2>
   {% endif %}
   {{ title_suffix }}
 
 
-  <div{{ content_attributes.addClass('node__content') }}>
+  <div{{ content_attributes.addClass('row') }}>
     {{ content }}
   </div>
+</div>
+ 
 
 </article>
