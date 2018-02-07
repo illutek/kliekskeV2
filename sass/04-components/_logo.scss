@@ -41,7 +41,15 @@
   }
 
   &--page {
-    width: 45%;
+    width: 60%;
+
+    @include respond(tab-land) {
+      width: 47%;
+    }
+
+    @include respond(phone) {
+      width: 35%;
+    }
   }
 
 }

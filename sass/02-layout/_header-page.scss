@@ -4,25 +4,44 @@
 
 .header-page {
   position: relative;
-  height: 17vh;
+  height: 23rem;
   background: linear-gradient(
     to left bottom, 
     rgba($color-gray, 1), 
     rgba($color-gray, 1));
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 13vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 13vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 18rem, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 18rem, 0 100%);
+
+  @include respond(phone) {
+    height: 15rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;
     top: 1rem;
     left: 1rem;
+
+    @include respond(phone) {
+      top: 0;
+      left: 0;
+    }
   }
 
   &__title-box {
     top: 35%;
     left: 50%;
     @include center(both);
-    // text-align: center;
+
+    @include respond(phone) {
+      top: 60%;
+    }
+
+    @include respond(smallest-phone) {
+      top: 89%;
+      left: 64%;
+    }
   }
 
 }
