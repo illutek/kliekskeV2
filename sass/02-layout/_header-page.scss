@@ -7,13 +7,20 @@
   height: 23rem;
   background: linear-gradient(
     to left bottom, 
-    rgba($color-gray, 1), 
-    rgba($color-gray, 1));
+    rgba($color-blue, 1), 
+    rgba($color-blue-saturat, .9)),
+    url("../images/aanzoek-van-Anton.jpg");
+    background-size: cover;
+    background-position: bottom;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 18rem, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 18rem, 0 100%);
 
   @include respond(phone) {
     height: 15rem;
+    background: linear-gradient(
+    to left bottom, 
+    rgba($color-blue, 1), 
+    rgba($color-blue-saturat, .9));
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
