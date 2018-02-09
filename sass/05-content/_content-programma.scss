@@ -2,6 +2,7 @@
 // @@ NODE PROGRAMMA
 // ////////////////////////
 
+// FULL PROGRAMMA VIEW (node)
 .node-programma {
   &__box {
     display: flex;
@@ -33,5 +34,27 @@
     }
 
   }
+
+}
+
+// SUPER-TEASER on page programma-overzicht
+.superteaser__programma {
+  display: flex;
+
+  &__poster {
+    width: 25%;
+
+  }
+
+  &__info {
+    width: 75%;
+    padding-left: 3rem;
+
+    &-content {
+      padding-bottom: 3rem;
+    }
+
+  }
+
 
 }

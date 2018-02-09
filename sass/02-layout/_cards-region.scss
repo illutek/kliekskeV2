@@ -32,6 +32,8 @@
 
     &:hover {
         background: rgba($color-white, .6);
+        transform: translateY(-2rem) scale(1.03);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
     }
 
     &__one {}
