@@ -13,4 +13,5 @@ regions:
   content: Content
   welcome: "Welkom tekst"
   sponsors: Sponsors
+  program: Programma
   footersponsors: "Footer Sponsors"

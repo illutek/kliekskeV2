@@ -28,6 +28,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all .3s;
+
+    &:hover {
+        background: rgba($color-white, .6);
+    }
 
     &__one {}
 
@@ -37,5 +42,12 @@
 
     &__icons {
         width: 4.8rem;
+    }
+
+    &__content {}
+
+    &__paragraph {
+        padding-bottom: 3rem;
+        min-height: 10rem;
     }
 }
