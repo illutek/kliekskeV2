@@ -1,0 +1,37 @@
+// /////////////////////////
+// @@ NODE PROGRAMMA
+// ////////////////////////
+
+.node-programma {
+  &__box {
+    display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__poster {
+    width: 45%;
+
+    @include respond(phone) { //600px
+      width: 100%;
+      order: 1;
+    }
+
+  }
+
+  &__info {
+    width: 55%;
+    padding-left: 3rem;
+
+    @include respond(phone) { //600px
+      width: 100%;
+      order: 0;
+      padding-left: 0;
+      padding-bottom: 3rem;
+    }
+
+  }
+
+}
