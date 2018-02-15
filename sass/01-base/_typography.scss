@@ -113,6 +113,10 @@ p {
   text-align: center;
   margin-bottom: 6rem;
 
+  &--view-footer {
+    margin-bottom: 9rem;
+  }
+
   @include respond(smallest-phone) {
     font-size: 3.5rem;
   }

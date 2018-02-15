@@ -31,6 +31,15 @@
 ## FLEX
 
 
+## Programma on programma page
+Een view programma-block (Content display custom display = super_teaser), Display a specified number of items | 1 item  
+Footer in that view = View area (VoorbijProgramma) Display a specified number of items | 50 items, skip 1 = so here is the
+first item skipt.  
+The title Voorbije programma's also in the view footer area with a extra class heading-secondary--view-footer
+
+De voorstelling datums in een tabel 100% breed in de tekst-editor = spijtig  
+Waarom 2lijnen met datums op 1 locatie
+
 
 
 TODO table override default inline styles ckeditor
