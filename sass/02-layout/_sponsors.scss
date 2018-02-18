@@ -9,7 +9,7 @@
   min-height: 55rem;
 
   &__box {
-    
+    position: relative;
   }
 
   &__items {
@@ -27,6 +27,13 @@
       padding-left: 0;
     }
 
+  }
+
+  &__region-button {
+    display: block;
+    left: 50%;
+    @include center('horizontal');
+    margin-top: 5rem;
   }
 
   &__item {
