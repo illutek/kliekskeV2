@@ -3,7 +3,23 @@
 // ///////////////////////
 
 .icon {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
   display: inline-block;
   padding-right: 5px;
+
+  &--copy {
+    &:before {
+      @extend .icon;
+      content: "\f1f9";
+    }
+  }
+
+  //TODO enkel de code \f1f9 lijkt door te komen raar
+  &--external-link {
+    &:before {
+      @extend .icon;
+      content: "\f0c1";
+    }
+  }
+
 }

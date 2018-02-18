@@ -19,7 +19,7 @@
   &__box {
     
     @include respond(phone) {
-      padding: 0 2rem;
+      padding: 0 2rem 6rem;
     }
   }
 
