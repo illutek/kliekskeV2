@@ -5,50 +5,50 @@
  #}
 
 <footer class="footer">
-  <div class="row">
-    <div class="footer__box">
+    <div class="row">
+        <div class="footer__box">
 
-        <div class="footer__logo__social-wrapper">
-            <div class="footer__logo-box">
-                <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-                    <img src="{{ base_path ~ directory }}/logo.png" alt="Logo Kliekske" class="logo--footer">
-                </a>
-            </div>
+            <div class="footer__logo__social-wrapper">
 
-            <div class="footer__social">
+                <div class="footer__logo-box">
+                    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+                        <img src="{{ base_path ~ directory }}/logo.png" alt="Logo Kliekske" class="logo--footer">
+                    </a>
+                </div>
+
                 <div class="footer__social-box">
-                    <a href="https://www.facebook.com/kliekske"><img class="social__img" src="{{ base_path ~ directory }}/images/facebook.png" alt="Facebook Kliekske"></a>
+                    <a href="https://www.facebook.com/kliekske">
+                        <img class="footer__social-img" src="{{ base_path ~ directory }}/images/facebook.png" alt="Facebook Kliekske">
+                    </a>
                 </div>
                 <div class="footer__copyright">
                     <div class="icon--copy">
                         't Kliekske | 2018
                     </div>
                 </div>
+
             </div>
+
+
+            <div class="footer__menu-box">
+                <ul>
+                    <li><a href="#" class="footer__menu__item">Home</a></li>
+                    <li><a href="node/9" class="footer__menu__item">Sponseren</a></li>
+                    <li><a href="#" class="footer__menu__item">Spelende leden</a></li>
+                    <li><a href="{{ base_path }}programma-overzicht" class="footer__menu__item">Programma</a></li>
+                    <li><a href="#" class="footer__menu__item">Nieuws</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer__sponsors-box">
+                <h3 class="heading-tertiary heading-tertiary--footer">Sponsors</h3>
+                <div class="footer__sponsors">
+                    {{ page.footersponsors }}
+                </div>
+
+            </div>
+
         </div>
-
-
-
-      <div class="footer__menu">
-          <ul>
-              <li><a href="#" class="footer__menu__item">Home</a></li>
-              <li><a href="node/9" class="footer__menu__item">Sponseren</a></li>
-              <li><a href="#" class="footer__menu__item">Spelende leden</a></li>
-              <li><a href="{{ base_path }}programma-overzicht" class="footer__menu__item">Programma</a></li>
-              <li><a href="#" class="footer__menu__item">Nieuws</a></li>
-          </ul>
-      </div>
-
-
-      
-      <div class="footer__sponsors">
-          <h3 class="heading-tertiary heading-tertiary--footer">Sponsors</h3>
-          <div class="footer__sponsors-box">
-            {{ page.footersponsors }}
-          </div>
-          
-      </div> 
-
-    </div>            
-  </div>
+    </div>
 </footer>

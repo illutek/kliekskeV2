@@ -15,7 +15,7 @@
 
     @include respond(phone) {
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
 
@@ -41,48 +41,7 @@
     }
   }
 
-
-  &__menu {
-    width: 15vw;
-    border-left: solid 1px $color-platinum;
-    padding: 0 2.5rem;
-
-    @include respond(phone) {
-      margin-bottom: 3rem;
-      order: 2;
-    }
-
-    &__item {
-      text-decoration: none;
-      color: $color-platinum;
-
-      &:hover {
-        transform: translateX(.5rem);
-      }
-    }
-
-  }
-
-  &__sponsors {
-    width: 65vw;
-    order: 3;
-
-    @include respond(phone) {
-      width: 100vw;
-      margin-top: 3rem;
-    }
-
-    &__content {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-
-  }
-
-
-  &__social {
+  &__social-box {
     width: 25vw;
     display: flex;
     flex-direction: column;
@@ -92,7 +51,46 @@
     font-size: 1rem;
   }
 
-  .social__img {
+  &__social-img {
     width: 2.8rem;
   }
+
+  &__menu-box {
+    width: 15vw;
+    border-left: solid 1px $color-platinum;
+    padding: 0 2.5rem;
+
+    @include respond(phone) {
+      margin-bottom: 3rem;
+      order: 2;
+    }
+
+  }
+
+  &__menu__item {
+    text-decoration: none;
+    color: $color-platinum;
+
+    &:hover {
+      transform: translateX(.5rem);
+    }
+  }
+
+  &__sponsors-box {
+    width: 65vw;
+    order: 3;
+
+    @include respond(phone) {
+      width: 100vw;
+      margin-top: 3rem;
+    }
+
+  }
+
+  &__sponsors__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
 }
