@@ -19,9 +19,13 @@
     }
   }
 
-  .footer__logo__social-wrapper {
+  &__one-wrapper {
     width: 20vw;
     order: 1;
+
+    @include respond(phone) {
+      width: 40vw;
+    }
   }
 
   &__logo-box {
@@ -42,7 +46,7 @@
   }
 
   &__social-box {
-    width: 25vw;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
   }
@@ -59,10 +63,11 @@
     width: 15vw;
     border-left: solid 1px $color-platinum;
     padding: 0 2.5rem;
+    order: 2;
 
     @include respond(phone) {
       margin-bottom: 3rem;
-      order: 2;
+      width: 25vw;
     }
 
   }
