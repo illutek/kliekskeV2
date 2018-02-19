@@ -13,8 +13,7 @@
 
   &__input, &__textarea {
     font-size: 1.5rem;
-    color: inherit;
-    font-family: $color-blackleather;
+    color: $color-blackleather;
     padding: 1.5rem 2rem;
     border-radius: 2px;
     background-color: rgba($color-white, .7);
@@ -44,5 +43,10 @@
     visibility: hidden;
     transform: translateY(-4rem);
   }
+
+}
+
+.webform-confirmation__message {
+  padding: 0 6rem;
 
 }
