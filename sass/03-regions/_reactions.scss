@@ -41,10 +41,16 @@
     }
   }
 
-  &__content {}
+  &__content {
+    padding: 0 2rem;
 
-  &__footer {
-    
-    
+    @include respond(phone) {
+      padding: 0;
+      margin-bottom: 4rem;
+    }
   }
+
+
+  &__footer {}
+
 }
