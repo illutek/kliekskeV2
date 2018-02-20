@@ -43,3 +43,19 @@ Waarom 2lijnen met datums op 1 locatie
 
 
 TODO table override default inline styles ckeditor
+
+## Navigation
+Was left: 0; heb dit moeten aanpassen naar right: -100%; omdat de &__list left nog aanklikbaar was.
+
+``` scss
+&__nav {
+    right: -100%;
+}
+
+&__checkbox:checked ~ &__nav {
+     opacity: 1;
+     width: 100%;
+     right: 0;
+   }
+   
+```
