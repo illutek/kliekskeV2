@@ -70,27 +70,25 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
+{% set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+] %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  <div{{ content_attributes.addClass('col-1-of-2') }}>
-    <div class="reaction__content">
-      <h3 class="heading-fourth">
-          {{ content.field_naam }}
-      </h3>
-      <p>{{ content.field_reaction_msg }}</p>
-    </div>
+    <div{{ content_attributes.addClass('col-1-of-2') }}>
+        <div class="reaction__content">
+            <h4 class="heading-fourth">
+                {{ content.field_naam }}
+            </h4>
+            <p>{{ content.field_reaction_msg }}</p>
+        </div>
 
-  </div>
+    </div>
 
 </article>

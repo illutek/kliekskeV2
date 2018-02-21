@@ -84,13 +84,13 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-<div class="content-page__box">
+<div class="content-reaction__box">
 
-    <h2{{ title_attributes.addClass('heading-secondary') }}>
+    <h3{{ title_attributes.addClass('heading-tertiary') }}>
       {{ label }}
-    </h2>
+    </h3>
 
-  <div{{ content_attributes.addClass('row') }}>
+  <div{{ content_attributes }}>
     {{ content }}
   </div>
 </div>

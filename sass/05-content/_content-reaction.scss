@@ -1,0 +1,54 @@
+// /////////////////////////
+// @@ NODE REACTIONS
+// ////////////////////////
+
+.content-reaction {
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    background-color: $color-white;
+    padding: 3rem;
+    flex-basis: 48%;
+    margin-bottom: 4rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    border-bottom: 3px solid $color-yellow;
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
+    }
+  }
+
+  &__box {
+    background-color: $color-white;
+  }
+
+  &__name {
+    color: $color-blue;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+  }
+
+  &__msg {
+    &::first-letter {
+      font-size: 180%;
+      color: $color-red-saturat;
+    }
+  }
+
+  &__add-btn {
+    display: block;
+    //@include center(horizontal);
+  }
+
+}

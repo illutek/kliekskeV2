@@ -5,20 +5,32 @@
 .icon {
   font-family: "Font Awesome 5 Free";
   display: inline-block;
-  padding-right: 5px;
+  padding-right: .5rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 
   &--copy {
-    &:before {
+    &::before {
       @extend .icon;
       content: "\f1f9";
     }
   }
 
+  &--user {
+    &::before {
+      @extend .icon;
+      padding-right: 1.2rem;
+      content: "\f007";
+    }
+  }
+
   //TODO enkel de code \f1f9 lijkt door te komen raar
   &--external-link {
-    &:before {
+    &::before {
       @extend .icon;
-      content: "\f0c1";
+      content: "\f360";
     }
   }
 
