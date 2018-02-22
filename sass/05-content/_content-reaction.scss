@@ -24,7 +24,7 @@
     transition: all .3s;
 
     &:hover {
-      transform: scale(1.05);
+      transform: translateY(-1rem) scale(1.03);
       box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
     }
   }
@@ -49,6 +49,7 @@
   &__add-btn {
     display: block;
     width: 44%;
+    padding: 3rem;
 
     @include respond(phone) {
       width: 100%;

@@ -43,11 +43,11 @@
  */
 #}
 
-{% include directory ~ '/templates/partials/navigation.html.twig' %}
+{% include directory ~ '/templates/partials/shared/navigation.html.twig' %}
 
 <div class="page__wrapper content-page">
 
-{% include directory ~ '/templates/partials/header-page.html.twig' %}
+{% include directory ~ '/templates/partials/pages/header-page.html.twig' %}
 
 
   {{ page.breadcrumb }}
@@ -56,8 +56,8 @@
 
   {{ page.help }}
 
-  {% include directory ~ '/templates/partials/page-reaction-content.html.twig' %}
+  {% include directory ~ '/templates/partials/pages/page-reaction-content.html.twig' %}
 
-  {% include directory ~ '/templates/partials/footer.html.twig' %}
+  {% include directory ~ '/templates/partials/shared/footer.html.twig' %}
 
 </div>
