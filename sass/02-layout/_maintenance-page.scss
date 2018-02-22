@@ -1,0 +1,82 @@
+/////////////////////////
+// @@ MAINTENANCE PAGE
+// ////////////////////////
+
+.maintenance {
+
+  &__container {
+    background-color: #e3e3e3;
+  }
+
+  &__header {
+    color: white;
+    position: relative;
+    height: 75vh;
+    background-image: linear-gradient(rgba(255, 244, 0, 0.64),
+            rgba(255, 244, 0, 0.64)),
+            url("../images/aanzoek-van-Anton.jpg");
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+
+    @include respond(phone) {
+      height: 65vh;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+    }
+  }
+
+  &__logo__box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+
+    @include respond(phone) {
+      top: 2rem;
+      left: 2rem;
+    }
+  }
+
+  &__logo__img {
+    height: 20rem;
+    width: 20rem;
+
+    @include respond(phone) {
+      height: 15rem;
+      width: 15rem;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 120rem;
+    margin: 0 auto;
+    font-size: 1.9rem;
+    padding: 6rem 3rem;
+  }
+
+  @include respond(phone) {
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

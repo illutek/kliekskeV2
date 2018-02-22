@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+<div class="maintenance__container">
+    <header class="maintenance__header">
+        <div class="maintenance__logo__box">
+            <img class="maintenance__logo__img" src="{{ base_path ~ directory }}/logo.png" alt="'t Kliekske logo">
+        </div>
+        <div class="maintenance__title">
+            <h1 class="heading-primary--main"><span class='no-spacing'>'</span>tKliekske</h1>
+            <h2 class="heading-primary--sub ">lachen is gezond</h2>
+        </div>
+    </header>
+    <div class="maintenance__content">
+        <h3 class="heading-tertiary">Toneel gezelschap 't Kliekske</h3>
+        <p>Er wordt aan een nieuwe site gewerkt, je kan ons altijd bereiken via onderstaande contact gegevens.</p>
+        <p>Het bestuur</p>
+        <div class="maintenance__contact">
+            <p>Jeffry Breban (0468 30 45 87)</p>
+            <p class="maintenance__adres">
+                Toneelgezelschap ‘ t Kliekske <br>
+                Waartstraat 24 <br>
+                3730 Hoeselt
+            </p>
+
+        </div>
+    </div>
+</div>
