@@ -19,17 +19,19 @@
   <h3>{{ title }}</h3>
 {% endif %}
 {% for row in rows %}
-  {%
-    set row_classes = [
-      'content-reaction__item',
-      default_row_class ? 'views-row',
-    ]
-  %}
+  {% set row_classes = [
+  'content-reaction__item',
+  default_row_class ? 'views-row',
+  ] %}
   <div{{ row.attributes.addClass(row_classes) }}>
     {{ row.content }}
   </div>
 {% endfor %}
 
+
 <div class="content-reaction__add-btn">
+  <p>Jouw reactie hier, deze wordt geplaatst na goedkeuring van de site veranwoordelijke.<br>
+    Dit om spamberichten te verkomen.</p>
   <a href="{{ base_path }}node/add/reactions" class="btn btn--yellow">Reactie toevoegen</a>
 </div>
+

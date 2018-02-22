@@ -48,7 +48,11 @@
 
   &__add-btn {
     display: block;
-    //@include center(horizontal);
+    width: 44%;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
 }
