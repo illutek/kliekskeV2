@@ -79,6 +79,10 @@
     @include center(both);
       list-style: none;
       text-align: center;
+
+    @include respond(phone) {
+      width: 80vw;
+    }
    }
  
    &__item {
@@ -102,6 +106,10 @@
        span {
          margin-right: 1.5rem;
          display: inline-block;
+       }
+
+       @include respond(smallest-phone) {
+         font-size: 2rem;
        }
      }
  
