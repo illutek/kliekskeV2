@@ -2,9 +2,9 @@
 // @@ NODE REACTIONS
 // ////////////////////////
 
-.content-reaction {
+.reaction {
 
-  &__wrapper {
+  &__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -29,7 +29,7 @@
     }
   }
 
-  &__box {
+  &__box--full {
     background-color: $color-white;
   }
 

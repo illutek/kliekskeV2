@@ -59,3 +59,31 @@ Was left: 0; heb dit moeten aanpassen naar right: -100%; omdat de &__list left n
    }
    
 ```
+
+## Font Awesome 5
+
+Niet alle icons komen zijn free het nadeel hiervan is als je eigen classes wil opzetten
+ zoals onderstaande   
+ ``` scss
+ .icon {
+   font: {
+     family: "Font Awesome 5 Free";
+     style: normal;
+     variant: normal;
+   }
+   display: inline-block;
+   padding-right: .5rem;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+ 
+   &--external-link {
+     &::before {
+       @extend .icon;
+       content: "\f35d";
+       font-weight: 900;
+     }
+   }
+ }
+ ```
+Dient de font-weight op 900 ingesteld dit omdat het icoon pro is.
+ 

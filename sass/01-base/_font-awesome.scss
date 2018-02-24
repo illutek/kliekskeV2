@@ -3,13 +3,20 @@
 // ///////////////////////
 
 .icon {
-  font-family: "Font Awesome 5 Free";
+  font: {
+    family: "Font Awesome 5 Free";
+    style: normal;
+    variant: normal;
+  }
   display: inline-block;
-  padding-right: .5rem;
-  font-style: normal;
-  font-variant: normal;
+  padding-right: .6rem;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+  transition: font-size .3s;
+  &:hover {
+    font-size: 110%;
+    padding-right: .4rem;
+  }
 
   &--copy {
     &::before {
@@ -26,12 +33,13 @@
     }
   }
 
-  //TODO enkel de code \f1f9 lijkt door te komen raar
+  // TODO enkel de code \f1f9 lijkt door te komen raar
+  // font-weight toevoegen lost dit probleem op
   &--external-link {
     &::before {
       @extend .icon;
-      content: "\f360";
+      content: "\f35d";
+      font-weight: 900;
     }
   }
-
 }

@@ -18,15 +18,15 @@ html {
   font-size: 62.5%;
 
   @include respond(tab-land) { // width < 1200px?
-    font-size: 56.25%;  // 1rem = 9px, 9/16px = 56.25%
+    font-size: 56.25%; // 1rem = 9px, 9/16px = 56.25%
   }
 
-  @include respond(tab-port) {  // width < 900px?
-    font-size: 55%;  // 1rem = 8px, 8/16px = 50%
+  @include respond(tab-port) { // width < 900px?
+    font-size: 55%; // 1rem = 8px, 8/16px = 50%
   }
 
-  @include respond(big-desktop) {  // width > 1800px?
-    font-size: 75%;  // 1rem = 12px, 12/16px = 75%
+  @include respond(big-desktop) { // width > 1800px?
+    font-size: 75%; // 1rem = 12px, 12/16px = 75%
   }
 }
 
@@ -39,14 +39,41 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: $color-red;
+  position: relative;
+  transition: all .3s;
 
+  &:hover {
+    &::before {
+      content: '';
+      background: $color-red;
+      height: 2px;
+      position: absolute;
+      width: 100%;
+      transform: scale(0);
+    }
+    transform: scale(1);
+  }
+
+  &::after {
+    content: '';
+    background: $color-red;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    top: 2rem;
+    left: 0;
+  }
+
+}
 
 img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 
 ::selection {
   background-color: $color-blackleather;

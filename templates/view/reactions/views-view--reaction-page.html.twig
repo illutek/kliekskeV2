@@ -33,6 +33,7 @@
 {%
   set classes = [
     'view',
+    'reactions',
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
@@ -62,7 +63,7 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content row content-reaction__wrapper">
+    <div class="view-content row reaction__content">
       {{ rows }}
     </div>
   {% elseif empty %}
