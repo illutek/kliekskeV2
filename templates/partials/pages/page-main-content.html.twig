@@ -4,9 +4,14 @@
 */ 
 #}
 
-<div class="">
+<div class="page__wrapper__content-main">
     <main role="main">
         <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
         {{ page.content }}
+
     </main>
+    <div class="page__content-suplement">
+        {{ page.suplement }}
+    </div>
 </div>

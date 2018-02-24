@@ -5,13 +5,13 @@
 .row {
   max-width: $grid-width;
   margin: 0 auto;
-  &:not(:last-child){
-    margin-bottom: $gutter-vertical;
-
-    @include respond(tab-port) {
-      margin-bottom: $gutter-vertical--small;
-    }
-  }
+  //&:not(:last-child){
+  //  margin-bottom: $gutter-vertical;
+  //
+  //  @include respond(tab-port) {
+  //    margin-bottom: $gutter-vertical--small;
+  //  }
+  //}
 
   @include respond(tab-port) {
     max-width: 95rem;

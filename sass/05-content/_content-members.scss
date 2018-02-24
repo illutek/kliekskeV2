@@ -1,0 +1,36 @@
+// /////////////////////////
+// @@ CONTENT MEMBERS
+// ////////////////////////
+
+// on views-view--taxonomy-term.html.twig
+// ---------------------------------------
+.members {
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    & > div {
+      flex: 0 0 20%;
+    }
+  }
+}
+
+//on node--leden--teaser.html.twig
+// ----------------------------------
+
+.members {
+
+  &__content {
+
+    &--teaser {
+      padding: 2rem;
+    }
+  }
+}
+
