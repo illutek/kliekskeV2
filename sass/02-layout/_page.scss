@@ -4,5 +4,24 @@
 
 .page {
 
-  &__wrapper {}
+  &__wrapper {
+    &__content-main {
+      & > div {
+        &:not(:last-child) {
+          margin-bottom: 12rem;
+        }
+      }
+    }
+  }
+
+  &__content-suplement {}
+
+}
+
+.region-suplement {
+  & > div {
+    &:not(:last-child) {
+      margin-bottom: 12rem;
+    }
+  }
 }

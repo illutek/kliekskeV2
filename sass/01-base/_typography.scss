@@ -162,4 +162,12 @@ p {
     weight: 300;
   }
   margin-bottom: 2rem;
+
+  &--smaller {
+    font-size: 2rem;
+
+    @include respond(tab-port) {
+      font-size: 1.6rem;
+    }
+  }
 }

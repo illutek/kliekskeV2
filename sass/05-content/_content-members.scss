@@ -8,15 +8,19 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 
-    @include respond(phone) {
+    @include respond(smallest-phone) {
       flex-direction: column;
     }
 
     & > div {
       flex: 0 0 20%;
+
+      @include respond(phone) {
+        flex: 0 0 50%;
+      }
     }
   }
 }
@@ -30,7 +34,20 @@
 
     &--teaser {
       padding: 2rem;
+      overflow: hidden;
+      margin-bottom: 3rem;
+
+      @include respond(phone) {
+        margin-bottom: 7rem;
+      }
+
+      @include respond(tab-port) {
+        padding: .5rem;
+      }
+
     }
   }
+
+  &__teaser-img {}
 }
 
