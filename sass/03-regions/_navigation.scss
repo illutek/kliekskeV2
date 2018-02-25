@@ -15,7 +15,7 @@
     position: fixed;
     top: 6rem;
     right: 6rem;
-    z-index: 2000;
+    z-index: 190;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.1);
     text-align: center;
     cursor: pointer;
@@ -43,7 +43,7 @@
     top: 6.5rem;
     right: 6.5rem;
     background-image: radial-gradient($color-blue, $color-blue-saturat);
-    z-index: 1000;
+    z-index: 185;
     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
     @include respond(tab-port) {
