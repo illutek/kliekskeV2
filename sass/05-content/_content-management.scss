@@ -37,9 +37,16 @@
       border-bottom: 2px solid $color-yellow;
       transition: all .4s .2s;
       width: 80vw;
+
+      @include respond(phone) {
+        padding: 1rem;
+        width: 95vw;
+      }
     }
 
   }
+
+  &__content {}
 
   &__close {
     &:link,
@@ -60,16 +67,35 @@
   &__view {
     &-content {
       display: flex;
+      //flex: 0 0 auto;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     &-row {
       width: 24%;
+
+      @include respond(smallest-phone){
+        width: 49%;
+      }
     }
 
   }
 
-  &__content {
+  &__node {
+    &-content {
+      padding: 2rem;
+      overflow: hidden;
+      margin-bottom: 3rem;
 
+      @include respond(phone) {
+        padding: .5rem;
+      }
+
+      @include respond(smallest-phone) {
+        //margin-bottom: 3rem;
+      }
+    }
   }
+
 }

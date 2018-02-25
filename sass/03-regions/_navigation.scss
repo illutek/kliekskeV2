@@ -43,7 +43,7 @@
     top: 6.5rem;
     right: 6.5rem;
     background-image: radial-gradient($color-blue, $color-blue-saturat);
-    z-index: 185;
+    z-index: 170;
     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
     @include respond(tab-port) {
@@ -68,8 +68,7 @@
     position: fixed;
     top: 0;
     right: -100%;
-    z-index: 1500;
-
+    z-index: 175;
     opacity: 0;
     width: 0;
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
