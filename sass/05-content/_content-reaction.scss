@@ -12,6 +12,12 @@
     @include respond(phone) {
       flex-direction: column;
     }
+
+    &--teaser {
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
   }
 
   &__item {
@@ -36,7 +42,6 @@
   &__name {
     color: $color-blue;
     font-size: 1.8rem;
-    padding-bottom: 1rem;
   }
 
   &__msg {
