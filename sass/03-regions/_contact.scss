@@ -26,7 +26,7 @@
     width: 40%;
 
     @include respond(phone) {
-      padding: 4rem;
+      padding: 0;
       width: 100%;
       order: 2;
     }
@@ -39,11 +39,14 @@
     padding: 3rem;
 
     @include respond(phone) {
+      background: rgba($color-white, .8);
       text-align: left;
       padding: 3rem;
       width: 100%;
       order: 1;
     }
+
+    &__body {}
 
   }
 
