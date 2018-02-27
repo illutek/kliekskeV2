@@ -6,3 +6,7 @@ globalstyle:
 globaljs:
   js:
     js/example.js: {}
+
+colorboxjs:
+  js:
+    js/colorbox.js: {}
