@@ -18,12 +18,13 @@
 
                 <div class="footer__social-box">
                     <a href="https://www.facebook.com/kliekske">
-                        <img class="footer__social-img" src="{{ base_path ~ directory }}/images/facebook.png" alt="Facebook Kliekske">
+                        <img class="footer__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
+                             alt="Facebook Kliekske">
                     </a>
                 </div>
                 <div class="footer__copyright">
                     <div class="icon--copy">
-                        't Kliekske | 2018
+                        't Kliekske | {{ "now"|date("Y") }}
                     </div>
                 </div>
 
@@ -32,11 +33,14 @@
 
             <div class="footer__menu-box">
                 <ul>
-                    <li><a href="#" class="footer__menu__item">Home</a></li>
-                    <li><a href="{{ base_path }}hoe-sponseren" class="footer__menu__item">Sponseren</a></li>
-                    <li><a href="#" class="footer__menu__item">Spelende leden</a></li>
-                    <li><a href="{{ base_path }}programma-overzicht" class="footer__menu__item">Programma</a></li>
-                    <li><a href="#" class="footer__menu__item">Nieuws</a></li>
+                    <li><a href="{{ path('<front>') }}" class="footer__menu__item">{{ "Home"|t }}</a></li>
+                    <li><a href="{{ base_path }}hoe-sponseren" class="footer__menu__item">{{ "Sponseren"|t }}</a></li>
+                    <li><a href="{{ base_path }}spelende-leden" class="footer__menu__item">{{ "Spelende leden"|t }}</a>
+                    </li>
+                    <li><a href="{{ base_path }}programma-overzicht" class="footer__menu__item">{{ "Programma"|t }}</a>
+                    </li>
+                    <li><a href="{{ base_path }}photo-albums" class="footer__menu__item">{{ "Foto's"|t }}</a></li>
+                    <li><a href="{{ base_path }}reaction-page" class="footer__menu__item">{{ "Reacties"|t }}</a></li>
                 </ul>
             </div>
 
