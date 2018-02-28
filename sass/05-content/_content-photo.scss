@@ -9,13 +9,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
   }
 
   &__view-row {
     flex: 0 0 24%;
     padding: 1vw;
     background-color: $color-white;
+    border-bottom: 2px solid $color-yellow;
     margin-bottom: 3rem;
     transition:all .3s;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
@@ -67,7 +67,7 @@
     }
 
     &__item {
-      flex: 0 0 20vw;
+      flex: 0 0 24%;
       padding: 1rem;
       background-color: $color-white;
       margin-bottom: 1rem;
@@ -79,8 +79,8 @@
         box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
       }
 
-      @include respond(small-phone) {
-        //flex: 0 0 75vw;
+      @include respond(phone) {
+        flex: 0 0 49%;
       }
     }
   }
