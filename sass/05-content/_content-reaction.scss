@@ -4,7 +4,15 @@
 
 .reaction {
 
-  &__content {
+  // node--reactions--teaser.html.twig
+  &__teaser-content {
+    @include respond(phone) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  // views-view--reaction-page.html.twig
+  &__view-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -12,42 +20,15 @@
     @include respond(phone) {
       flex-direction: column;
     }
-
-    &--teaser {
-      @include respond(phone) {
-        margin-bottom: 4rem;
-      }
-    }
   }
 
+  // views-view-unformatted--reaction-page.html.twig
   &__item {
-    background-color: $color-white;
-    padding: 3rem;
     flex-basis: 48%;
-    margin-bottom: 4rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-    border-bottom: 3px solid $color-yellow;
-    transition: all .3s;
 
     &:hover {
       transform: translateY(-1rem) scale(1.03);
       box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
-    }
-  }
-
-  &__box--full {
-    background-color: $color-white;
-  }
-
-  &__name {
-    color: $color-blue;
-    font-size: 1.8rem;
-  }
-
-  &__msg {
-    &::first-letter {
-      font-size: 180%;
-      color: $color-red-saturat;
     }
   }
 
@@ -61,4 +42,22 @@
     }
   }
 
+  // node--reactions--full.html.twig
+  &__box--full {
+    background-color: $color-white;
+  }
+
+  // field--node--field-naam--reactions.html.twig
+  &__name {
+    color: $color-blue;
+    font-size: 1.8rem;
+  }
+
+  //field--node--field-reaction-msg.html.twig
+  &__msg {
+    &::first-letter {
+      font-size: 180%;
+      color: $color-red-saturat;
+    }
+  }
 }

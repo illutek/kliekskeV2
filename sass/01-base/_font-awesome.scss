@@ -13,10 +13,6 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   transition: font-size .3s;
-  &:hover {
-    font-size: 110%;
-    padding-right: .4rem;
-  }
 
   &--copy {
     &::before {

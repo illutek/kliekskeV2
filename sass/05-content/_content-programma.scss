@@ -3,6 +3,7 @@
 // ////////////////////////
 
 // FULL PROGRAMMA VIEW (node)
+// node--programma--full.html.twig
 .node-programma {
   &__box {
     display: flex;
@@ -38,17 +39,17 @@
 }
 
 // SUPER-TEASER on page programma-overzicht
-
+// node--programma--super-teaser.html.twig
 .superteaser__programma {
   display: flex;
 
   &__poster {
-    width: 25%;
+    width: 35%;
 
   }
 
   &__info {
-    width: 75%;
+    //width: 75%;
     padding-left: 3rem;
 
     &-content {
@@ -58,3 +59,28 @@
   }
 
 }
+
+// views-view--voorbijprogramma.html.twig
+.past-program {
+  &__view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  //views-view-unformatted--voorbijprogramma.html.twig
+  &__views-row {
+    flex-basis: 48%;
+
+    &:hover {
+      transform: translateY(-1rem) scale(1.03);
+      box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .1);
+    }
+  }
+
+}
+

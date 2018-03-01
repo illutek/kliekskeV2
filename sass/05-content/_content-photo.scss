@@ -5,20 +5,18 @@
 .photos {
 
   // view overzicht photo albums
+  // views-view--photo-albums.html.twig
   &__view-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
+  // views-view-unformatted--photo-albums.html.twig
   &__view-row {
     flex: 0 0 24%;
-    padding: 1vw;
-    background-color: $color-white;
-    border-bottom: 2px solid $color-yellow;
-    margin-bottom: 3rem;
-    transition:all .3s;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    padding: 2rem;
+
     &:hover {
       background-color: $color-yellow;
       transform: translateY(-.5rem) scale(1.03);

@@ -91,7 +91,8 @@
             </h3>
 
             <div{{ content_attributes.addClass('photos__teaser-img') }}>
-                {{ content.field_photos[0] }}
+              {# TODO volgende werkt niet {{ content.field_photos['#items'].getValue|first.value }}#}
+              {{ content.field_photos[0] }}
             </div>
 
         </div>

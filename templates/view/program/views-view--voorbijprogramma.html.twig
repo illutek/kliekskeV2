@@ -33,7 +33,7 @@
 {%
   set classes = [
     'view',
-    'reactions',
+    'program__view',
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
@@ -63,7 +63,7 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content row reaction__view-content">
+    <div class="view-content past-program__view-content">
       {{ rows }}
     </div>
   {% elseif empty %}
@@ -86,11 +86,6 @@
   {% if footer %}
     <div class="view-footer">
       {{ footer }}
-    </div>
-  {% endif %}
-  {% if feed_icons %}
-    <div class="feed-icons">
-      {{ feed_icons }}
     </div>
   {% endif %}
 </div>
