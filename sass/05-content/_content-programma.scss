@@ -42,15 +42,31 @@
 // node--programma--super-teaser.html.twig
 .superteaser__programma {
   display: flex;
+  align-items: center;
+
+  @include respond(phone){
+    flex-direction: column;
+  }
 
   &__poster {
-    width: 35%;
+    width: 65%;
+    padding-right: 3rem;
+
+    @include respond(phone) {
+      width: 100%;
+      order: 2;
+      margin-top: 3rem;
+      padding-right: 0;
+    }
 
   }
 
   &__info {
-    //width: 75%;
-    padding-left: 3rem;
+    //padding-left: 3rem;
+
+    @include respond(phone) {
+      order: 1;
+    }
 
     &-content {
       padding-bottom: 3rem;
@@ -58,6 +74,13 @@
 
   }
 
+}
+
+// views-view--programma-block.html.twig
+.program {
+  &__view-content {
+
+  }
 }
 
 // views-view--voorbijprogramma.html.twig
