@@ -36,6 +36,12 @@
       @extend .icon;
       content: "\f35d";
       font-weight: 900;
+
     }
+
+    &:hover::before {
+      color: $color-red-saturat;
+    }
+
   }
 }
