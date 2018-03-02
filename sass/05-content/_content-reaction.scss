@@ -55,9 +55,6 @@
 
   //field--node--field-reaction-msg.html.twig
   &__msg {
-    &::first-letter {
-      font-size: 180%;
-      color: $color-red-saturat;
-    }
+    &::first-letter {}
   }
 }
