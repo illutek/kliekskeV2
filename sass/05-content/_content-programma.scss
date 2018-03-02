@@ -62,7 +62,6 @@
   }
 
   &__info {
-    //padding-left: 3rem;
 
     @include respond(phone) {
       order: 1;

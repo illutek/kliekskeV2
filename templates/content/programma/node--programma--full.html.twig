@@ -70,39 +70,42 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
-    'node',
-    'content-page',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+{% set classes = [
+'node',
+'content-page',
+'node--type-' ~ node.bundle|clean_class,
+node.isPromoted() ? 'node--promoted',
+node.isSticky() ? 'node--sticky',
+not node.isPublished() ? 'node--unpublished',
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-<div class="content-page__box">
+  <div class="content-page__box">
 
     <h2{{ title_attributes.addClass('heading-secondary') }}>
       {{ label }}
     </h2>
 
-  <div{{ content_attributes.addClass('row node-programma__box') }}>
-    <div class="node-programma__poster">
-      {{ content.field_poster }}
-    </div>
-    <div class="node-programma__info">
-      {{ content.body }}
+    <div{{ content_attributes.addClass('row node-programma__box') }}>
 
-      {{ content.field_voorstellingen }}
-      
-      {{ content.field_bezetting }}
+      {% if content.field_poster[0] is not empty %}
+        <div class="node-programma__poster">
+          {{ content.field_poster }}
+        </div>
+      {% endif %}
+
+      <div class="node-programma__info">
+        {{ content.body }}
+
+        {{ content.field_voorstellingen }}
+
+        {{ content.field_bezetting }}
+      </div>
+
     </div>
   </div>
-</div>
- 
+
 
 </article>
