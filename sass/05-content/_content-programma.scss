@@ -97,11 +97,6 @@
   //views-view-unformatted--voorbijprogramma.html.twig
   &__views-row {
     flex-basis: 48%;
-
-    &:hover {
-      transform: translateY(-1rem) scale(1.03);
-      box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .1);
-    }
   }
 
 }

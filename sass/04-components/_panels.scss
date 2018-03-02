@@ -3,15 +3,26 @@
 // //////////////////////////////
 
 .panel {
+  padding: 3rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  background-color: $color-white;
+  transition: all .3s;
 
-  &--white {
-    background-color: $color-white;
-    padding: 3rem;
-    margin-bottom: 4rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    border-bottom: 3px solid $color-yellow;
-    transition: all .3s;
+  &--red {
+    border-bottom: 3px solid $color-red-saturat;
   }
 
-  &--yellow {}
+  &--yellow {
+    border-bottom: 3px solid $color-yellow;
+  }
+
+  &--blue {
+    border-bottom: 3px solid $color-blue;
+  }
+
+  &--hover:hover {
+    transform: translateY(-1rem) scale(1.03);
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .1);
+  }
 }
