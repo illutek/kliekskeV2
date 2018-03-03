@@ -4,16 +4,14 @@
  *  
  */
 #}
-{%
-  set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+node.isPromoted() ? 'node--promoted',
+node.isSticky() ? 'node--sticky',
+not node.isPublished() ? 'node--unpublished',
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
@@ -25,17 +23,12 @@
   {% endif %}
   {{ title_suffix }}
 
+  <div{{ content_attributes.addClass('row welcome__content') }}>
 
-  <div{{ content_attributes.addClass('row') }}>
-    <div class="col-1-of-2">
-      <div class="welcome__body">{{ content.body }}</div>
-    </div>
+    <div class="welcome__body">{{ content.body }}</div>
 
-    <div class="col-1-of-2">
-    {# TODO class u-shadow add to img #}
-      <div class="welcome__img">{{ content.field_welcome_img }}</div>
-    </div>
-    
+    <div class="welcome__img">{{ content.field_welcome_img }}</div>
+
   </div>
 
 </article>

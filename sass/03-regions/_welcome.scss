@@ -17,20 +17,42 @@
   }
 
   &__box {
+    min-height: 38rem;
     
     @include respond(phone) {
       padding: 0 2rem 6rem;
     }
   }
 
-  &__body {
-    min-height: 38rem;
+  &__content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 
     @include respond(phone) {
-      min-height: 24rem;
+      flex-direction: column;
     }
+  }
+
+  &__body {
+    width: 50%;
+    padding: 0 3rem;
+
+    @include respond(phone) {
+      margin-bottom: 5rem;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    padding: 0 3rem;
+
+    @include respond(phone) {
+      width: 100%;
+      padding: 0;
+    }
+
   }
 }
