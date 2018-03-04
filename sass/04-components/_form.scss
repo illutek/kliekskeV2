@@ -29,7 +29,7 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba(#000000, .2);
+      box-shadow: 0 1rem 2rem rgba($color-black, .2);
       border-bottom: 3px solid $color-blue;
     }
 
@@ -45,8 +45,6 @@
   }
 
   &__label {
-      font-size: 1.2rem;
-      font-weight: 700;
       margin-left: 2rem;
       margin-top: .7rem;
       display: block;

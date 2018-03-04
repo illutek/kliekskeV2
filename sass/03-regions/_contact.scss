@@ -8,16 +8,20 @@
   color: $color-white;
 
   &__box {
-    background-image: linear-gradient(105deg,transparent 50%, rgba(255,255,255,.9) 0,rgba(255,255,255,.9) 100%),url(../images/samen_groeten.jpg);
+    background-image: linear-gradient(105deg, transparent 50%,
+            rgba(255, 255, 255, .9) 0,
+            rgba(255, 255, 255, .9) 100%),
+    url(../images/samen_groeten.jpg);
     background-size: cover;
     background-position: center;
     min-height: 40rem;
     display: flex;
     justify-content: space-around;
+    border-bottom: 3px solid $color-yellow;
 
     @include respond(phone) {
       flex-direction: column;
-      background-image: linear-gradient(90deg,transparent 0%, rgba(255,255,255,.7) 0,rgba(255,255,255,.7) 100%),url(../images/samen_groeten.jpg);
+      background-image: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .7) 0, rgba(255, 255, 255, .7) 100%), url(../images/samen_groeten.jpg);
     }
   }
 
@@ -46,7 +50,8 @@
       order: 1;
     }
 
-    &__body {}
+    &__body {
+    }
 
   }
 
