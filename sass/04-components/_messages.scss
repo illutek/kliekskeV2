@@ -1,0 +1,19 @@
+// /////////////////////////
+// @@ MESSAGES
+// ////////////////////////
+
+.messages {
+  background: no-repeat 1rem 1.7rem;  /* LTR */
+  background-color: $color-white;
+  border: none;
+  border-radius: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  &--error {
+    color: $color-red-saturat;
+    background-image: url(../images/icons/error.svg);
+    border-bottom: 3px solid $color-red-saturat;
+    box-shadow: none;
+  }
+}
