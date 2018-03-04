@@ -3,17 +3,32 @@
 // ////////////////////////
 
 .messages {
-  background: no-repeat 1rem 1.7rem;  /* LTR */
+  padding: 15px 20px 15px 35px;
   background-color: $color-white;
   border: none;
   border-radius: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  margin-bottom: 3rem;
 
   &--error {
     color: $color-red-saturat;
-    background-image: url(../images/icons/error.svg);
+    background-image: url(../images/icons/error.png);
     border-bottom: 3px solid $color-red-saturat;
+    box-shadow: none;
+  }
+
+  &--status {
+    color: $color-green;
+    background-image: url(../images/icons/check.png);
+    border-bottom: 3px solid $color-green;
+    box-shadow: none;
+  }
+
+  &--warning {
+    color: $color-orange;
+    background-image: url(../images/icons/warning.png);
+    border-bottom: 3px solid $color-orange;
     box-shadow: none;
   }
 }
