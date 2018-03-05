@@ -77,6 +77,13 @@
         box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
       }
 
+      // general-sibling enkel als vb kleurt alle backgrounds rood
+      // behalve de eerste
+      // .photos__field__item~.photos__field__item{background-color:#d5343b}
+      //& ~ & {
+      //  background-color: $color-red-saturat;
+      //}
+
       @include respond(phone) {
         flex: 0 0 49%;
       }
