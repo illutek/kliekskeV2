@@ -3,6 +3,11 @@ globalstyle:
     theme:
       css/styles.css: {}
 
+animatestyle:
+  css:
+    theme:
+      bower_components/animate.css/animate.css: {}
+
 globaljs:
   js:
     js/example.js: {}
@@ -10,3 +15,8 @@ globaljs:
 colorboxjs:
   js:
     js/colorbox.js: {}
+
+wowjs:
+  js:
+    bower_components/wow/dist/wow.min.js: {}
+    js/wow-init.js: {}
