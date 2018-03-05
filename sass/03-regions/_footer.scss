@@ -92,21 +92,35 @@
     }
   }
 
-  &__sponsors-box {
-    width: 65vw;
-    order: 3;
+  &__sponsors {
 
-    @include respond(phone) {
-      width: 100vw;
-      margin-top: 3rem;
+    &-box {
+      width: 65vw;
+      order: 3;
+
+      @include respond(phone) {
+        width: 100vw;
+        margin-top: 3rem;
+      }
+
     }
 
-  }
+    &__content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
 
-  &__sponsors__content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    &-field {
+      outline-offset: 1rem;
+      transition: all .3s;
+
+      &:hover {
+        outline: 2px solid $color-yellow;
+      }
+
+    }
+
   }
 
 }
