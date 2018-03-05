@@ -59,26 +59,36 @@
     width: 2.8rem;
   }
 
-  &__menu-box {
-    width: 15vw;
-    border-left: solid 1px $color-platinum;
-    padding: 0 2.5rem;
-    order: 2;
+  &__menu {
 
-    @include respond(phone) {
-      margin-bottom: 3rem;
-      width: 25vw;
+    &-box {
+      width: 15vw;
+      border-left: solid 1px $color-platinum;
+      padding: 0 2.5rem;
+      order: 2;
+
+      @include respond(phone) {
+        margin-bottom: 3rem;
+        width: 25vw;
+      }
+
     }
 
-  }
+    &__item {
+      transition: all .3s;
+      &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+      }
+    }
 
-  &__menu__item {
-    text-decoration: none;
-    color: $color-platinum;
-    transition: color .3s;
+    &__link {
+      text-decoration: none;
+      color: $color-platinum;
+      transition: color .3s;
 
-    &:hover {
-      color: $color-yellow;
+      &:hover {
+        color: $color-yellow;
+      }
     }
   }
 

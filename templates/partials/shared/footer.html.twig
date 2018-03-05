@@ -33,14 +33,24 @@
 
             <div class="footer__menu-box">
                 <ul>
-                    <li><a href="{{ path('<front>') }}" class="footer__menu__item">{{ "Home"|t }}</a></li>
-                    <li><a href="{{ base_path }}hoe-sponseren" class="footer__menu__item">{{ "Sponseren"|t }}</a></li>
-                    <li><a href="{{ base_path }}spelende-leden" class="footer__menu__item">{{ "Spelende leden"|t }}</a>
+                    <li class="footer__menu__item">
+                        <a href="{{ path('<front>') }}" class="footer__menu__link">{{ "Home"|t }}</a>
                     </li>
-                    <li><a href="{{ base_path }}programma-overzicht" class="footer__menu__item">{{ "Programma"|t }}</a>
+                    <li class="footer__menu__item">
+                        <a href="{{ base_path }}hoe-sponseren" class="footer__menu__link">{{ "Sponseren"|t }}</a>
                     </li>
-                    <li><a href="{{ base_path }}photo-albums" class="footer__menu__item">{{ "Foto's"|t }}</a></li>
-                    <li><a href="{{ base_path }}reaction-page" class="footer__menu__item">{{ "Reacties"|t }}</a></li>
+                    <li class="footer__menu__item">
+                        <a href="{{ base_path }}spelende-leden" class="footer__menu__link">{{ "Spelende leden"|t }}</a>
+                    </li>
+                    <li class="footer__menu__item">
+                        <a href="{{ base_path }}programma-overzicht" class="footer__menu__link">{{ "Programma"|t }}</a>
+                    </li>
+                    <li class="footer__menu__item">
+                        <a href="{{ base_path }}photo-albums" class="footer__menu__link">{{ "Foto's"|t }}</a>
+                    </li>
+                    <li class="footer__menu__item">
+                        <a href="{{ base_path }}reaction-page" class="footer__menu__link">{{ "Reacties"|t }}</a>
+                    </li>
                 </ul>
             </div>
 
