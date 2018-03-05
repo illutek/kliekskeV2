@@ -3,7 +3,11 @@
 // ///////////////////////
 
 .u-shadow {
-  box-shadow: 0 1.5rem 4rem rgba(0,0,0,.4);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+}
+
+.u-text-center {
+  text-align: center !important;
 }
 
 .u-btn-center--pt {

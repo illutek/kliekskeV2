@@ -36,7 +36,10 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes.addClass('heading-secondary') }}>{{ label }}</h2>
+      <div class="u-text-center">
+        <h2{{ title_attributes.addClass('heading-secondary heading-secondary--skew') }}>{{ label }}</h2>
+      </div>
+
   {% endif %}
   {{ title_suffix }}
   {% block content %}
