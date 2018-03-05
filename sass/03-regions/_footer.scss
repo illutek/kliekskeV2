@@ -75,9 +75,10 @@
   &__menu__item {
     text-decoration: none;
     color: $color-platinum;
+    transition: color .3s;
 
     &:hover {
-      transform: translateX(.5rem);
+      color: $color-yellow;
     }
   }
 
