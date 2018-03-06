@@ -2,7 +2,7 @@
  * Created by stefan on 05-03-2018.
  *
  */
-(function ($) {
+(function ($, Drupal, window, document, undefined) {
     $(document).ready(function () {
         var wow = new WOW(
             {
@@ -20,4 +20,4 @@
         );
         wow.init();
     });
-})(jQuery);
+})(jQuery, Drupal, this, this.document);
