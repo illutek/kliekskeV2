@@ -1,5 +1,7 @@
 # 't Kliekske
 
+The idea was to set up my own grid (see below), but afterwards everything was converted to **FLEX**.
+
 ## CUSTOM GRID 
 ``` scss
 .col-1-of-2 {
@@ -29,16 +31,18 @@
 
 
 ## FLEX
+So no heavy css frame-work like Bootstrap for me.  
+https://www.w3schools.com/css/css3_flexbox.asp 
 
+### Webtechnologies
+- **Yarn** FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT, for devDependencies primarily for gulp.
+- **Bower** for the theme Dependencies
+- **Sass** is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- **BEM** — Block Element Modifier is a highly useful, powerful, and simple naming convention that makes your 
+front-end code easier to read and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.
+For Drupal i've raised that a level up by converting almost all views to twig files.
+- **Gulp** is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
-## Programma on programma page
-Een view programma-block (Content display custom display = super_teaser), Display a specified number of items | 1 item  
-Footer in that view = View area (VoorbijProgramma) Display a specified number of items | 50 items, skip 1 = so here is the
-first item skipt.  
-The title Voorbije programma's also in the view footer area with a extra class heading-secondary--view-footer
-
-De voorstelling datums in een tabel 100% breed in de tekst-editor = spijtig  
-Waarom 2lijnen met datums op 1 locatie
 
 
 
@@ -62,8 +66,8 @@ Was left: 0; heb dit moeten aanpassen naar right: -100%; omdat de &__list left n
 
 ## Font Awesome 5
 
-Niet alle icons komen zijn free het nadeel hiervan is als je eigen classes wil opzetten
- zoals onderstaande   
+Not all icons come are free disadvantage is if you want to set up your own classes.
+ as follows.   
  ``` scss
  .icon {
    font: {
@@ -85,5 +89,20 @@ Niet alle icons komen zijn free het nadeel hiervan is als je eigen classes wil o
    }
  }
  ```
-Dient de font-weight op 900 ingesteld dit omdat het icoon pro is.
- 
+The font-weight set to 900 this because the icon is pro.
+
+## COLORBOX 
+Drupal8 module is not responsief out of the box, the solution, an extra js file was added. (js/colorbox.js).
+Set up a library.
+
+``` yml
+colorboxjs:
+  js:
+    js/colorbox.js: {}
+```
+And add this only to the photos-page templates/content/photos/node--photos--full,html.twig  
+```twig
+{{ attach_library('kliekske/colorboxjs') }}
+```
+
+## 
