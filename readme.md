@@ -32,11 +32,18 @@ The idea was to set up my own grid (see below), but afterwards everything was co
 
 ## FLEX
 So no heavy css frame-work like Bootstrap for me.  
-https://www.w3schools.com/css/css3_flexbox.asp 
+https://www.w3schools.com/css/css3_flexbox.asp  
+The panels on the reaction page and the program page to give them the same height, 
+with Bootstrap I never managed to do that.  
+
+ 
+ #### CSS-Grid beats Bootstrap
+ https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 
 ### Webtechnologies
 - **Yarn** FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT, for devDependencies primarily for gulp.
 - **Bower** for the theme Dependencies
+for this theme Font-awesome 5, wowjs and animate.css
 - **Sass** is the most mature, stable, and powerful professional grade CSS extension language in the world.
 - **BEM** — Block Element Modifier is a highly useful, powerful, and simple naming convention that makes your 
 front-end code easier to read and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.
@@ -53,11 +60,9 @@ With css no JS
      width: 100%;
      right: 0;
    }
-   
 ```
 
 ## Font Awesome 5
-
 Not all icons come are free disadvantage is if you want to set up your own classes as follows.   
  ``` scss
  .icon {
@@ -83,17 +88,36 @@ Not all icons come are free disadvantage is if you want to set up your own class
 The font-weight set to 900 this because the icon is pro.
 
 ## COLORBOX 
-Drupal8 module is not responsief out of the box, the solution, an extra js file was added. (js/colorbox.js).
-Set up a library.
+Drupal8 module is not responsief out of the box, the solution, an extra js file was added (js/colorbox.js).  
+1. Set up a library.  
+2. And add this only to the photos-page templates/content/photos/node--photos--full.html.twig  
 
 ``` yml
 colorboxjs:
   js:
     js/colorbox.js: {}
 ```
-And add this only to the photos-page templates/content/photos/node--photos--full.html.twig  
+
 ```twig
 {{ attach_library('kliekske/colorboxjs') }}
 ```
 
-## 
+## WOW
+Only on the frontpage, in a separate library   
+```yml
+animatestyle:
+  css:
+    theme:
+      bower_components/animate.css/animate.css: {}
+      
+      
+wowjs:
+  js:
+    bower_components/wow/dist/wow.min.js: {}
+    js/wow-init.js: {}
+```
+ and added this only on the front--page  
+```twig
+{{ attach_library('kliekske/wowjs') }}
+{{ attach_library('kliekske/animatestyle') }}
+```
