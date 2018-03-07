@@ -12,7 +12,7 @@
       <i class="card__icons">
         <img src="{{ base_path ~ directory }}/images/cinema.png" alt="theater icoon">
       </i>
-      <h3 class="heading-tertiary">Programma</h3>
+      <h3 class="heading-tertiary">{{ "Programma"|t }}</h3>
 
       {{ page.program }}
 
@@ -22,12 +22,17 @@
       <i class="card__icons">
         <img src="{{ base_path ~ directory }}/images/theater-masks.png" alt="Theater maskers icoon">
       </i>
-      <h3 class="heading-tertiary">Spelende leden</h3>
+      <h3 class="heading-tertiary">{{ "Spelende leden"|t }}</h3>
 
       <article class="card__content">
-        <p class="card__paragraph">Drepellendus hic aspernatur error adipisci explicabo cum perferendis animi ipsa
-          mollitia. Vero!. </p>
-        <a href="{{ base_path }}spelende-leden" class="btn btn--blue">Lees verder</a>
+        <p class="card__paragraph">
+
+          {# TODO text #}
+          Drepellendus hic aspernatur error adipisci explicabo cum perferendis animi ipsa
+          mollitia. Vero!.
+
+        </p>
+        <a href="{{ base_path }}spelende-leden" class="btn btn--blue">{{ "Lees verder"|t }}</a>
       </article>
 
     </div>
@@ -36,11 +41,14 @@
       <i class="card__icons">
         <img src="{{ base_path ~ directory }}/images/piggy-bank.png" alt="Spaatv/arken icoon">
       </i>
-      <h3 class="heading-tertiary">Hoe sponseren</h3>
+      <h3 class="heading-tertiary">{{ "Hoe sponseren"|t }}</h3>
 
       <article class="card__content">
-        <p class="card__paragraph">Wenst u ons te sponseren, dan kan dat op volgende wijze:</p>
-        <a href="{{ base_path }}hoe-sponseren" class="btn btn--red">Lees verder</a>
+        <p class="card__paragraph">
+          {{ "Wenst u ons te sponseren, dan kan dat op volgende wijze:"|t }}
+
+        </p>
+        <a href="{{ base_path }}hoe-sponseren" class="btn btn--red">{{ "Lees verder"|t }}</a>
       </article>
 
     </div>

@@ -1,3 +1,8 @@
+{#
+/**
+ * Header region on the front-page
+*/
+#}
 <header class="header">
   <div class="header__logo-box">
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
@@ -7,11 +12,11 @@
 
   <div class="header__title-box">
     <h1 class="heading-primary">
-      <span class="heading-primary--main">'tKliekske</span>
-      <span class="heading-primary--sub">Lachen is gezond</span>
+      <span class="heading-primary--main">{{ site_name }}</span>
+      <span class="heading-primary--sub">{{ site_slogan }}</span>
     </h1>
     <a href="{{ base_path }}programma-overzicht" class="btn btn--white btn--animated">
-          Ons Programma
+          {{ "Ons Programma"|t }}
     </a>
   </div>
 </header>

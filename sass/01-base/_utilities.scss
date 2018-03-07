@@ -1,18 +1,24 @@
 // ///////////////////////
 // @@ ++ UTILITIES
 // ///////////////////////
+// When is the !important rule actually useful and a good idea?
+// In my opinion, utility classes are a good use case.
 
 .u-shadow {
-  box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .4) !important;
 }
 
 .u-text-center {
   text-align: center !important;
 }
 
+.u-text-left {
+  text-align: left !important;
+}
+
 .u-btn-center--pt {
-  padding-top: 6rem;
-  text-align: center;
+  padding-top: 6rem !important;
+  text-align: center !important;
 }
 
 .u-margin-top-small {

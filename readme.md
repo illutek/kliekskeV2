@@ -44,18 +44,10 @@ For Drupal i've raised that a level up by converting almost all views to twig fi
 - **Gulp** is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
 
-
-
-TODO table override default inline styles ckeditor
-
 ## Navigation
-Was left: 0; heb dit moeten aanpassen naar right: -100%; omdat de &__list left nog aanklikbaar was.
+With css no JS
 
 ``` scss
-&__nav {
-    right: -100%;
-}
-
 &__checkbox:checked ~ &__nav {
      opacity: 1;
      width: 100%;
@@ -66,8 +58,7 @@ Was left: 0; heb dit moeten aanpassen naar right: -100%; omdat de &__list left n
 
 ## Font Awesome 5
 
-Not all icons come are free disadvantage is if you want to set up your own classes.
- as follows.   
+Not all icons come are free disadvantage is if you want to set up your own classes as follows.   
  ``` scss
  .icon {
    font: {
@@ -100,7 +91,7 @@ colorboxjs:
   js:
     js/colorbox.js: {}
 ```
-And add this only to the photos-page templates/content/photos/node--photos--full,html.twig  
+And add this only to the photos-page templates/content/photos/node--photos--full.html.twig  
 ```twig
 {{ attach_library('kliekske/colorboxjs') }}
 ```

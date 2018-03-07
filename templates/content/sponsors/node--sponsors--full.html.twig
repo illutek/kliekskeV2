@@ -70,36 +70,38 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
+{% set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+] %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-<div class="content-page__box">
+    <div class="content-page__box">
 
- {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes.addClass('heading-secondary') }}>
-      {{ label }}
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+        {{ title_prefix }}
+        <div class="u-text-left">
+            <h2{{ title_attributes.addClass('heading-secondary') }}>
+                {{ label }}
+            </h2>
+        </div>
+        {{ title_suffix }}
 
-
-  <div{{ content_attributes.addClass('row') }}>
-  <div class="col-1-of-3">{{ content.body}} {{ content.field_url_sponsor}}</div>
-  <div class="col-1-of-3">{{ content.field_sponsor_logo}}</div>
-  <div class="col-1-of-3"></div>
-  </div>
-</div>
- 
+        {#
+        /**
+        * View only for the editors to see, the only plase on the site where i use
+        * the custom grid
+        */
+        #}
+        <div{{ content_attributes.addClass('row') }}>
+            <div class="col-1-of-3">{{ content.body }} {{ content.field_url_sponsor }}</div>
+            <div class="col-1-of-3">{{ content.field_sponsor_logo }}</div>
+            <div class="col-1-of-3"></div>
+        </div>
+    </div>
 
 </article>
