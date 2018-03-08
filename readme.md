@@ -111,13 +111,15 @@ animatestyle:
       bower_components/animate.css/animate.css: {}
       
       
-wowjs:
+frontjs:
   js:
     bower_components/wow/dist/wow.min.js: {}
     js/wow-init.js: {}
+    js/popup-close.js: {}
 ```
  and added this only on the front--page  
 ```twig
 {{ attach_library('kliekske/wowjs') }}
 {{ attach_library('kliekske/animatestyle') }}
 ```
+* js/popup-close.js = close the popup 'Bestuur' after click on the body-background

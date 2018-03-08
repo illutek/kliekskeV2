@@ -2,8 +2,9 @@
  * Created by stefan on 05-03-2018.
  *
  */
-(function ($, Drupal, window, document, undefined) {
+(function ($) {
     $(document).ready(function () {
+
         var wow = new WOW(
             {
                 boxClass: 'wow',      // animated element css class (default is wow)
@@ -19,5 +20,6 @@
             }
         );
         wow.init();
+
     });
-})(jQuery, Drupal, this, this.document);
+})(jQuery);

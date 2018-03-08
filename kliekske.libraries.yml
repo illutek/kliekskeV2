@@ -8,15 +8,12 @@ animatestyle:
     theme:
       bower_components/animate.css/animate.css: {}
 
-globaljs:
-  js:
-    js/example.js: {}
-
 colorboxjs:
   js:
     js/colorbox.js: {}
 
-wowjs:
+frontjs:
   js:
     bower_components/wow/dist/wow.min.js: {}
     js/wow-init.js: {}
+    js/popup-close.js: {}
