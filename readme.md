@@ -123,3 +123,41 @@ frontjs:
 {{ attach_library('kliekske/animatestyle') }}
 ```
 * js/popup-close.js = close the popup 'Bestuur' after click on the body-background
+
+## Drupal main-menu
+Convert hard-coded menu to Drupal main-menu, below the hard-coded menu
+```twig
+<nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item"><a href="{{ path('<front>') }}" class="navigation__link">{{ "HOME"|t }}</a></li>
+      <li class="navigation__item"><a href="{{ base_path }}hoe-sponseren" class="navigation__link">{{ "Hoe Sponseren?"|t }}</a></li>
+      <li class="navigation__item"><a href="{{ base_path }}spelende-leden" class="navigation__link">{{ "Spelende leden"|t }}</a></li>
+      <li class="navigation__item"><a href="{{ base_path }}programma-overzicht" class="navigation__link"> {{ "Programma"|t }}</a></li>
+      <li class="navigation__item"><a href="{{ base_path }}photo-albums" class="navigation__link">{{ "Foto's"|t }}</a></li>
+      <li class="navigation__item"><a href="{{ base_path }}reaction-page" class="navigation__link">{{ "Reacties"|t }}</a></li>
+    </ul>
+  </nav>
+```
+The only file needed menu.html.twig located in core/themes/classy/templates/navigation.  
+Copy to kliekske/templates/navigation and rename to menu--main.html.twig  
+Here the customized code.
+```twig
+{% import _self as menus %}
+    {% if items %}
+        <ul{{ attributes.addClass('navigation__list') }}>
+            {% for item in items %}
+                {% set classes = [
+                    'navigation__item',
+                    item.in_active_trail ? 'navigation__item--active-trail',
+                ] %}
+                <li{{ item.attributes.addClass(classes) }}>
+                    {{ link(item.title, item.url, { class: ['navigation__link'] }) }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+```
+The most special part is to add a class to the a tag.  
+```twig
+{ class: ['navigation__link'] }
+```

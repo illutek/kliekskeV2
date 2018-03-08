@@ -11,6 +11,7 @@ libraries:
 
 regions:
   content: Content
+  navigation: Navigation
   welcome: "Welkom tekst"
   sponsors: Sponsors
   program: Programma
