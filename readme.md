@@ -46,7 +46,8 @@ with Bootstrap I never managed to do that.
 for this theme Font-awesome 5, wowjs and animate.css
 - **Sass** is the most mature, stable, and powerful professional grade CSS extension language in the world.
 - **BEM** — Block Element Modifier is a highly useful, powerful, and simple naming convention that makes your 
-front-end code easier to read and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.
+front-end code easier to read and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.  
+http://getbem.com/introduction/  
 For Drupal i've raised that a level up by converting almost all views to twig files.
 - **Gulp** is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
