@@ -10,4 +10,23 @@
   &--superteaser {
     margin-bottom: 5rem;
   }
-} 
+}
+
+// node--page.html.twig
+.body__column {
+  column-rule: 1px dotted $color-light-gray;
+
+  @include respond(phone) {
+    column-count: 1 !important;
+  }
+
+  &--two {
+    column-count: 2;
+    column-gap: 3rem;
+  }
+
+  &--three {
+    column-count: 3;
+    column-gap: 3rem;
+  }
+}

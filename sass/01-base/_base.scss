@@ -36,7 +36,9 @@ body {
   @include respond(phone) {
     padding: 0;
   }
+
 }
+
 a {
   text-decoration: none;
   color: $color-red;
@@ -89,4 +91,10 @@ img {
 ::selection {
   background-color: $color-blackleather;
   color: $color-white;
+}
+
+// resolves the bug in connection with the main menu when logged in
+// .contextual-region by default position: relative
+.contextual-region {
+  position: static;
 }
