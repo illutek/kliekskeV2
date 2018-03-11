@@ -11,12 +11,20 @@
   </div>
 
   <div class="header__title-box">
-    <h1 class="heading-primary">
-      <span class="heading-primary--main">{{ site_name }}</span>
-      <span class="heading-primary--sub">{{ site_slogan }}</span>
-    </h1>
-    <a href="{{ base_path }}programma-overzicht" class="btn btn--white btn--animated">
-          {{ "Ons Programma"|t }}
-    </a>
+
+    <div class="header__title">
+      <h1 class="heading-primary heading-primary--front">{{ site_name }}</h1>
+    </div>
+
+    <div class="header__slogan">{{ site_slogan }}</div>
+
+    <div class="header__cta">
+      <a href="{{ base_path }}programma-overzicht" class="btn btn--white btn--animated">
+        {{ "Ons Programma"|t }}
+      </a>
+    </div>
+
   </div>
+
+
 </header>

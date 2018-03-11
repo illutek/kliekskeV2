@@ -16,39 +16,25 @@ p {
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
-  
+
 }
 
-
 .heading-primary {
-  margin-bottom: 4rem;
+  font-family: 'Passion One', cursive;
+  display: block;
+  color: $color-white;
 
-  &--main {
-    display: block;
-    color: $color-white;
-    letter-spacing: 2rem;
+  &--front {
+    line-height: .7;
     font: {
-      size: 8rem;
+      size: 20vw;
       weight: 400;
-    }
-
-
-  
-    @include respond(small-phone) {
-      letter-spacing: 1.3rem;
-      font-size: 5.5rem;
-    }
-  
-    @include respond(smallest-phone) {
-      font-size: 4.5rem;
-      letter-spacing: 1.2rem;
     }
   }
 
+
   &--page {
     display: block;
-    color: $color-white;
-    letter-spacing: 2rem;
     font: {
       size: 5rem;
       weight: 400;
@@ -88,22 +74,21 @@ p {
       size: 4.5rem;
       weight: 400;
     }
-  
+
     @include respond(tab-port) {
       font-size: 4rem;
     }
-  
+
     @include respond(small-phone) {
       letter-spacing: .5rem;
       font-size: 3.5rem;
     }
-  
+
     @include respond(smallest-phone) {
       font-size: 2.8rem;
     }
   }
 }
-
 
 .heading-secondary {
   display: inline-block;
