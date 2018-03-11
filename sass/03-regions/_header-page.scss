@@ -4,7 +4,7 @@
 
 .header-page {
   position: relative;
-  height: 23rem;
+  height: 30rem;
   margin-bottom: 5rem;
   background: linear-gradient(
     to left bottom, 
@@ -17,7 +17,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 18rem, 0 100%);
 
   @include respond(phone) {
-    height: 15rem;
+    height: 20rem;
     background: linear-gradient(
     to left bottom, 
     rgba($color-blue, 1), 
@@ -30,6 +30,7 @@
     position: absolute;
     top: 1rem;
     left: 1rem;
+    z-index: 100;
 
     @include respond(phone) {
       top: 0;
@@ -47,8 +48,7 @@
     }
 
     @include respond(smallest-phone) {
-      top: 89%;
-      left: 64%;
+      top: 79%;
     }
   }
 

@@ -36,6 +36,7 @@
     position: absolute;
     top: 1rem;
     left: 1rem;
+    z-index: 100;
   }
 
   &__title-box {
@@ -49,6 +50,7 @@
 
     @include respond(phone) {
       top: 60%;
+      grid-template-rows: 1fr 5rem 4fr;
     }
   }
 
@@ -56,26 +58,33 @@
     grid-column: 1;
     grid-row: 1 / 3;
     align-self: end;
+
+    @include respond(smallest-phone) {
+      align-self: start;
+    }
   }
 
   &__slogan {
     grid-column: 1;
     grid-row: 2 / 3;
+    justify-self: end;
     background: $color-blue-saturat;
     color: $color-white;
-    max-width: 15vw;
-    padding: 1rem 0;
+    font-size: 2vw;
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include respond(phone) {
-      max-width: 24vw;
+    @include respond(small-phone) {
+      display: none;
     }
   }
 
   &__cta {
     grid-column: 1;
     grid-row: 3 / 4;
-    justify-content: center;
+    justify-self: center;
     align-self: end;
   }
 }
-
