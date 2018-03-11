@@ -7,7 +7,7 @@
   height: 100vh;
   background: linear-gradient(
           to left bottom,
-          rgba($color-yellow, 0.7),
+          rgba($color-blue-saturat, 0.7),
           rgba($color-yellow-saturat, 0.7)),
   url("../images/aanzoek-van-Anton.jpg");
   background-size: cover;
@@ -71,7 +71,7 @@
     background: $color-blue-saturat;
     color: $color-white;
     font-size: 2vw;
-    padding: 3vw;
+    padding: 3.5vw;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -36,8 +36,10 @@ https://www.w3schools.com/css/css3_flexbox.asp
 The panels on the reaction page and the program page to give them the same height, 
 with Bootstrap I never managed to do that.  
 
+## CSS-GRID
+The title region in the header with ccs-grid
  
- #### CSS-Grid beats Bootstrap
+#### CSS-Grid beats Bootstrap
  https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 
 ### Webtechnologies

@@ -25,13 +25,15 @@ p {
     weight: 400;
   }
   line-height: .7;
-  display: block;
-  color: $color-white;
+  display: inline-block;
 
   &--front {
     font: {
       size: 25vw;
     }
+    background-image: linear-gradient(to right, $color-white, $color-yellow-saturat);
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   &--page {
@@ -39,6 +41,7 @@ p {
     font: {
       size: 25vw;
     }
+    color: $color-white;
   }
 }
 
