@@ -31,9 +31,13 @@ p {
     font: {
       size: 25vw;
     }
-    background-image: linear-gradient(to right, $color-white, $color-yellow-saturat);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: $color-white;
+
+    @supports ( -webkit-background-clip: text) {
+      background-image: linear-gradient(to right, $color-white, $color-yellow-saturat);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
   }
 
   &--page {
@@ -44,7 +48,6 @@ p {
     color: $color-white;
   }
 }
-
 
 .heading-secondary {
   display: inline-block;
