@@ -3,43 +3,52 @@
 // ////////////////////////
 
 .footer {
-  min-height: 50rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0rem 1fr 1fr 0rem;
   grid-template-rows: 1fr;
+  grid-gap: 2rem;
 
   &__left {
+    grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 
-    &-image {
-      grid-column: 1;
-      grid-row: 1;
+    &-bcg-image {
+      grid-column: 1 / 4;
+      grid-row: 1 / 4;
     }
 
-    &__social-box {
-      grid-column: 1;
-      grid-row: 1;
+    &__social {
+      &-box {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        align-self: end;
+      }
+
+      &-img {
+        width: 3rem;
+        height: 3rem;
+
+      }
     }
+
 
     &__copy-rights {
-      grid-column: 1;
-      grid-row: 1;
+      grid-column: 2;
+      grid-row: 2 / 3;
+      align-self: end;
     }
 
   }
 
   &__right-sponsors {
+    grid-column: 3 / 4;
+    align-self: center;
 
   }
 
-  .sponsors__box {
-    background: $color-white;
-    border: 1rem solid $color-red-saturat;
-    padding: 2rem;
-  }
-
+  // class added on views-view--sponsors-footer.html.twig
   &__sponsors__content {
     display: flex;
     justify-content: space-around;
@@ -53,8 +62,6 @@
     &:hover {
       outline: 2px solid $color-yellow;
     }
-
   }
-
 
 }

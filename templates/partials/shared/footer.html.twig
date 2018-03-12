@@ -6,32 +6,33 @@
 
 <footer class="footer">
     <div class="footer__left">
-        <div class="footer__left-image">
+        <div class="footer__left-bcg-image">
             <img src="{{ base_path ~ directory }}/images/sponsor_img.png" alt="sponsor afbeelding">
         </div>
 
-        <div class="footer__social-box">
+        <div class="footer__left__social-box">
             <a href="https://www.facebook.com/kliekske">
-                <img class="footer__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
+                <img class="footer__left__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
                      alt="Facebook Kliekske">
             </a>
         </div>
 
-        <div class="footer__copy-rights">
+        <div class="footer__left__copy-rights">
             <div class="icon--copy">
                 {{ site_name }} | {{ "now"|date("Y") }}
             </div>
         </div>
 
     </div>
+
+
     <div class="footer__right-sponsors">
-        <div class="sponsors__box">
-            <h3 class="heading-tertiary">{{ "Onze sonsors" |t }}</h3>
+        <div class="panel panel--red">
+            <h3 class="heading-tertiary">{{ "Onze sponsors" |t }}</h3>
             <div class="sponsors__logos">
                 {{ page.footersponsors }}
             </div>
         </div>
-
     </div>
 
 </footer>
