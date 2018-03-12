@@ -5,66 +5,33 @@
  #}
 
 <footer class="footer">
-    <div class="row">
-        <div class="footer__box">
-
-            <div class="footer__one-wrapper">
-
-                <div class="footer__logo-box">
-                    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-                        <img src="{{ base_path ~ directory }}/logo.png" alt="Logo Kliekske" class="logo--footer">
-                    </a>
-                </div>
-
-                <div class="footer__social-box">
-                    <a href="https://www.facebook.com/kliekske">
-                        <img class="footer__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
-                             alt="Facebook Kliekske">
-                    </a>
-                </div>
-
-                <div class="footer__copyright">
-                    <div class="icon--copy">
-                        {{ site_name }} | {{ "now"|date("Y") }}
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="footer__menu-box">
-                <ul>
-                    <li class="footer__menu__item">
-                        <a href="{{ path('<front>') }}" class="footer__menu__link">{{ "Home"|t }}</a>
-                    </li>
-                    <li class="footer__menu__item">
-                        <a href="{{ base_path }}hoe-sponseren" class="footer__menu__link">{{ "Sponseren"|t }}</a>
-                    </li>
-                    <li class="footer__menu__item">
-                        <a href="{{ base_path }}spelende-leden" class="footer__menu__link">{{ "Spelende leden"|t }}</a>
-                    </li>
-                    <li class="footer__menu__item">
-                        <a href="{{ base_path }}programma-overzicht" class="footer__menu__link">{{ "Programma"|t }}</a>
-                    </li>
-                    <li class="footer__menu__item">
-                        <a href="{{ base_path }}photo-albums" class="footer__menu__link">{{ "Foto's"|t }}</a>
-                    </li>
-                    <li class="footer__menu__item">
-                        <a href="{{ base_path }}reaction-page" class="footer__menu__link">{{ "Reacties"|t }}</a>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="footer__sponsors-box">
-                <h3 class="heading-tertiary heading-tertiary--footer">
-                    {{ "Sponsors"|t }}
-                </h3>
-                <div class="footer__sponsors">
-                    {{ page.footersponsors }}
-                </div>
-
-            </div>
-
+    <div class="footer__left">
+        <div class="footer__left-image">
+            <img src="{{ base_path ~ directory }}/images/sponsor_img.png" alt="sponsor afbeelding">
         </div>
+
+        <div class="footer__social-box">
+            <a href="https://www.facebook.com/kliekske">
+                <img class="footer__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
+                     alt="Facebook Kliekske">
+            </a>
+        </div>
+
+        <div class="footer__copy-rights">
+            <div class="icon--copy">
+                {{ site_name }} | {{ "now"|date("Y") }}
+            </div>
+        </div>
+
     </div>
+    <div class="footer__right-sponsors">
+        <div class="sponsors__box">
+            <h3 class="heading-tertiary">{{ "Onze sonsors" |t }}</h3>
+            <div class="sponsors__logos">
+                {{ page.footersponsors }}
+            </div>
+        </div>
+
+    </div>
+
 </footer>

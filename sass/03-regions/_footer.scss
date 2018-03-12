@@ -3,124 +3,58 @@
 // ////////////////////////
 
 .footer {
-  background-color: $color-black;
-  min-height: 30rem;
-  padding: 6rem 0;
-  color: $color-platinum;
-  margin-top: 5rem;
+  min-height: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 
-  &__box {
+  &__left {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    &-image {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &__social-box {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &__copy-rights {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+  }
+
+  &__right-sponsors {
+
+  }
+
+  .sponsors__box {
+    background: $color-white;
+    border: 1rem solid $color-red-saturat;
+    padding: 2rem;
+  }
+
+  &__sponsors__content {
     display: flex;
-    flex-direction: row;
-
-    @include respond(phone) {
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
-  &__one-wrapper {
-    width: 20vw;
-    order: 1;
+  &__sponsors-field {
+    outline-offset: 1rem;
+    transition: all .3s;
 
-    @include respond(phone) {
-      width: 40vw;
-    }
-  }
-
-  &__logo-box {
-    margin-top: -3rem;
-
-    @include respond(phone) {
-      margin-bottom: 3rem;
-      order: 0;
-    }
-
-    @include respond(small-phone) {
-      width: 40vw;
-    }
-
-    @include respond(smallest-phone) {
-      width: 55vw;
-    }
-  }
-
-  &__social-box {
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__copyright {
-    font-size: 1rem;
-  }
-
-  &__social-img {
-    width: 2.8rem;
-  }
-
-  &__menu {
-
-    &-box {
-      width: 15vw;
-      border-left: solid 1px $color-platinum;
-      padding: 0 2.5rem;
-      order: 2;
-
-      @include respond(phone) {
-        margin-bottom: 3rem;
-        width: 25vw;
-      }
-
-    }
-
-    &__item {
-      transition: all .3s;
-      &:hover {
-        transform: skewY(2deg) skewX(15deg) scale(1.1);
-      }
-    }
-
-    &__link {
-      text-decoration: none;
-      color: $color-platinum;
-      transition: color .3s;
-
-      &:hover {
-        color: $color-yellow;
-      }
-    }
-  }
-
-  &__sponsors {
-
-    &-box {
-      width: 65vw;
-      order: 3;
-
-      @include respond(phone) {
-        width: 100vw;
-        margin-top: 3rem;
-      }
-
-    }
-
-    &__content {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    &-field {
-      outline-offset: 1rem;
-      transition: all .3s;
-
-      &:hover {
-        outline: 2px solid $color-yellow;
-      }
-
+    &:hover {
+      outline: 2px solid $color-yellow;
     }
 
   }
+
 
 }
