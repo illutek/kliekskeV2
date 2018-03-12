@@ -13,15 +13,19 @@
   background-size: cover;
   background-position: bottom;
 
+  @include respond(tab-port) {
+    height: 85vh;
+  }
+
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     height: 95vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  }
 
-  @include respond(tab-port) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    @include respond(tab-port) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
   }
 
   @include respond(phone) {
@@ -39,38 +43,49 @@
     z-index: 100;
   }
 
-  @supports (display: grid) {
-
-  }
-
   &__title-box {
-    top: 35%;
-    left: 50%;
     @include center(both);
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 7rem 1fr;
 
     @include respond(phone) {
       top: 60%;
-      grid-template-rows: 1fr 5rem 4fr;
     }
   }
 
-  &__title {
-    grid-column: 1;
-    grid-row: 1 / 3;
+  @supports (display: grid) {
+    &__title-box {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 7rem 1fr;
 
-    @include respond(smallest-phone) {
-      align-self: start;
+      @include respond(phone) {
+        grid-template-rows: 1fr 5rem 4fr;
+      }
+    }
+
+    &__title {
+      grid-column: 1;
+      grid-row: 1 / 3;
+
+      @include respond(smallest-phone) {
+        align-self: start;
+      }
+    }
+
+    &__slogan {
+      grid-column: 1;
+      grid-row: 2 / 3;
+      justify-self: end;
+    }
+
+    &__cta {
+      grid-column: 1;
+      grid-row: 3 / 4;
+      justify-self: center;
+      align-self: end;
     }
   }
 
   &__slogan {
-    grid-column: 1;
-    grid-row: 2 / 3;
-    justify-self: end;
     background: $color-blue-saturat;
     color: $color-white;
     font-size: 2vw;
@@ -84,12 +99,4 @@
     }
   }
 
-  &__cta {
-    grid-column: 1;
-    grid-row: 3 / 4;
-    justify-self: center;
-    align-self: end;
-  }
 }
-
-

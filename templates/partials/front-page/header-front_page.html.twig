@@ -1,0 +1,28 @@
+{#
+/**
+ * Header region on the front-page
+*/
+#}
+<header class="header">
+
+    <div class="header__logo-box">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+            <img src="{{ base_path ~ directory }}/logo.png" alt="Logo Kliekske" class="logo">
+        </a>
+    </div>
+
+    <div class="header__title-box">
+        <div class="header__title">
+            <h1 class="heading-primary heading-primary--front">{{ site_name }}</h1>
+        </div>
+
+        <div class="header__slogan">{{ site_slogan }}</div>
+
+        <div class="header__cta">
+            <a href="{{ base_path }}programma-overzicht" class="btn btn--white btn--animated">
+                {{ "Ons Programma"|t }}
+            </a>
+        </div>
+    </div>
+
+</header>
