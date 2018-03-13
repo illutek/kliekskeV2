@@ -3,6 +3,7 @@
 // ////////////////////////
 
 .footer {
+  padding-top: 6rem;
   display: grid;
   grid-template-columns: 0rem 1fr 1fr 0rem;
   grid-template-rows: 1fr;
@@ -11,19 +12,39 @@
   &__left {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 1fr;
+
+    @include respond(phone) {
+      grid-column: 2 / 4;
+      order: 2;
+
+    }
 
     &-bcg-image {
-      grid-column: 1 / 4;
+      grid-column: 1 / 5;
       grid-row: 1 / 4;
+    }
+
+    &__msg {
+      grid-column: 2 / span 2;
+      grid-row: 1 ;
+      align-self: center;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    &__copy-rights {
+      grid-column: 2 / span 2;
+      grid-row: 2 / 3;
+      align-self: center;
     }
 
     &__social {
       &-box {
-        grid-column: 3 / 4;
+        grid-column: 4;
         grid-row: 2 / 3;
-        align-self: end;
+        align-self: center;
       }
 
       &-img {
@@ -33,26 +54,24 @@
       }
     }
 
-
-    &__copy-rights {
-      grid-column: 2;
-      grid-row: 2 / 3;
-      align-self: end;
-    }
-
   }
 
   &__right-sponsors {
     grid-column: 3 / 4;
     align-self: center;
 
+    @include respond(phone) {
+      grid-column: 2 / 4;
+      order: 1;
+    }
+
   }
 
   // class added on views-view--sponsors-footer.html.twig
   &__sponsors__content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
   }
 
   &__sponsors-field {
@@ -60,7 +79,7 @@
     transition: all .3s;
 
     &:hover {
-      outline: 2px solid $color-yellow;
+      outline: 2px solid $color-red-saturat;
     }
   }
 

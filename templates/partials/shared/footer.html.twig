@@ -10,17 +10,23 @@
             <img src="{{ base_path ~ directory }}/images/sponsor_img.png" alt="sponsor afbeelding">
         </div>
 
-        <div class="footer__left__social-box">
-            <a href="https://www.facebook.com/kliekske">
-                <img class="footer__left__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
-                     alt="Facebook Kliekske">
-            </a>
+        <div class="footer__left__msg">
+            {{ "Jouw logo bij de sponsors?"|t }}
+            <br>
+            <a href="#section-contact">{{ "Contacteer ons."|t }}</a>
         </div>
 
         <div class="footer__left__copy-rights">
             <div class="icon--copy">
                 {{ site_name }} | {{ "now"|date("Y") }}
             </div>
+        </div>
+
+        <div class="footer__left__social-box">
+            <a href="https://www.facebook.com/kliekske">
+                <img class="footer__left__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
+                     alt="Facebook Kliekske">
+            </a>
         </div>
 
     </div>
