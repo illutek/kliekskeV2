@@ -17,3 +17,4 @@ frontjs:
     bower_components/wow/dist/wow.min.js: {}
     js/wow-init.js: {}
     js/popup-close.js: {}
+    js/smooth-scroll.js: {}
