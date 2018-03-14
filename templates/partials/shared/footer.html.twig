@@ -5,40 +5,41 @@
  #}
 
 <footer class="footer">
-    <div class="footer__left">
-        <div class="footer__left-bcg-image">
-            <img src="{{ base_path ~ directory }}/images/sponsor_img.png" alt="sponsor afbeelding">
-        </div>
+  <div class="footer__left">
+    <div class="footer__left-bcg-image">
+      <img src="{{ base_path ~ directory }}/images/sponsor_img.png" alt="sponsor afbeelding">
+    </div>
 
-        <div class="footer__left__msg">
-            {{ "Jouw logo bij de sponsors?"|t }}
-            <br>
-            <a href="#section-contact">{{ "Contacteer ons."|t }}</a>
-        </div>
+    <div class="footer__left__msg">
+      {{ "Jouw logo bij de sponsors?"|t }}
+      <br>
+      <a href="#section-contact">{{ "Contacteer ons."|t }}</a>
+    </div>
 
-        <div class="footer__left__copy-rights">
-            <div class="icon--copy">
-                {{ site_name }} | {{ "now"|date("Y") }}
-            </div>
-        </div>
+    <div class="footer__left__footnote">
 
-        <div class="footer__left__social-box">
-            <a href="https://www.facebook.com/kliekske">
-                <img class="footer__left__social-img" src="{{ base_path ~ directory }}/images/facebook.png"
-                     alt="Facebook Kliekske">
-            </a>
-        </div>
+      <div class="icon--copy">
+        {{ site_name }} | {{ "now"|date("Y") }}
+      </div>
+
+      <div class="footer__left__social">
+        <a href="https://www.facebook.com/kliekske" class="social-icon">
+          <span class="icon-brands--facebook">&nbsp</span>
+        </a>
+      </div>
 
     </div>
 
+  </div>
 
-    <div class="footer__right-sponsors">
-        <div class="panel panel--red">
-            <h3 class="heading-tertiary">{{ "Onze sponsors" |t }}</h3>
-            <div class="sponsors__logos">
-                {{ page.footersponsors }}
-            </div>
-        </div>
+
+  <div class="footer__right-sponsors">
+    <div class="panel panel--red">
+      <h3 class="heading-tertiary">{{ "Onze sponsors" |t }}</h3>
+      <div class="sponsors__logos">
+        {{ page.footersponsors }}
+      </div>
     </div>
+  </div>
 
 </footer>

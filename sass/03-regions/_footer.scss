@@ -4,67 +4,84 @@
 
 .footer {
   padding-top: 6rem;
-  display: grid;
-  grid-template-columns: 0rem 1fr 1fr 0rem;
-  grid-template-rows: 1fr;
-  grid-gap: 2rem;
+  display: flex;
+  justify-content: space-around;
+
+  @include respond(phone) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__left {
-    grid-column: 2 / 3;
+    width: 48%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 9vw 1fr 9vw;
+    grid-template-rows: 1fr 15vw 14vw;
+    text-align: center;
 
     @include respond(phone) {
-      grid-column: 2 / 4;
-      order: 2;
-
+      width: 95%;
+      grid-template-columns: 17vw 1fr 17vw;
+      grid-template-rows: 1fr 27vw 28vw;
+    }
+    
+    @include respond(smallest-phone) {
+      grid-template-rows: 1fr 27vw 30vw;
     }
 
     &-bcg-image {
-      grid-column: 1 / 5;
-      grid-row: 1 / 4;
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 3;
+      align-self: end;
     }
 
     &__msg {
-      grid-column: 2 / span 2;
-      grid-row: 1 ;
-      align-self: center;
-      text-align: center;
-      font-size: 3rem;
+      grid-column: 2;
+      grid-row: 2;
+      justify-content: center;
+      align-self: start;
+      font-size: 2vw;
+
+      @include respond(phone) {
+        font-size: 5vw;
+      }
     }
 
-    &__copy-rights {
-      grid-column: 2 / span 2;
-      grid-row: 2 / 3;
-      align-self: center;
+    &__footnote {
+      grid-column: 2;
+      grid-row: 3;
+      align-self: start;
+
+      display: flex;
+      justify-content: space-between;
     }
 
     &__social {
-      &-box {
-        grid-column: 4;
-        grid-row: 2 / 3;
-        align-self: center;
+      font-size: 2vw;
+      line-height: 3rem;
+      a {
+        color: $color-blue-saturat;
+        transition: color .3s;
+
+        &:hover {
+          color: $color-red-saturat;
+        }
       }
 
-      &-img {
-        width: 3rem;
-        height: 3rem;
-
+      @include respond(phone) {
+        font-size: 4vw;
       }
     }
 
   }
 
   &__right-sponsors {
-    grid-column: 3 / 4;
-    align-self: center;
+    width: 48%;
 
     @include respond(phone) {
-      grid-column: 2 / 4;
-      order: 1;
+      width: 90%;
     }
-
   }
 
   // class added on views-view--sponsors-footer.html.twig

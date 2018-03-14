@@ -29,6 +29,8 @@
     }
   }
 
+
+
   // TODO enkel de code \f1f9 lijkt door te komen raar
   // font-weight toevoegen lost dit probleem op
   &--external-link {
@@ -41,6 +43,27 @@
 
     &:hover::before {
       color: $color-red-saturat;
+    }
+
+  }
+}
+
+.icon-brands {
+  font: {
+    family: "Font Awesome 5 Brands";
+    style: normal;
+    variant: normal;
+  }
+  display: inline-block;
+  padding-right: .6rem;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  transition: font-size .3s;
+
+  &--facebook {
+    &::before {
+      @extend .icon-brands;
+      content: "\f09a";
     }
 
   }

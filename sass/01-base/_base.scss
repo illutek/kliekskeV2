@@ -43,7 +43,11 @@ a {
   text-decoration: none;
   color: $color-red;
   position: relative;
-  transition: all .3s;
+  transition: color .3s;
+
+  &:hover {
+    color: $color-blue-saturat;
+  }
 }
 .onhold a {
   text-decoration: none;
