@@ -6,7 +6,6 @@
   &,
   &:link,
   &:visited {
-    // position: relative;
     padding: 2rem 5rem;
     display: inline-block;
     cursor: pointer;
@@ -31,6 +30,9 @@
   background: $color-white;
   color: $color-blackleather;
   text-transform: uppercase;
+    &:hover {
+      color: $color-blackleather;
+    }
   }
 
   &--yellow {
@@ -41,10 +43,18 @@
   &--blue {
     background: $color-blue;
     color: $color-white;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   &--red {
     background: $color-red-saturat;
     color: $color-white;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 }
