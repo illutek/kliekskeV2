@@ -25,7 +25,7 @@
       grid-template-columns: 17vw 1fr 17vw;
       grid-template-rows: 1fr 27vw 28vw;
     }
-    
+
     @include respond(smallest-phone) {
       grid-template-rows: 1fr 27vw 30vw;
     }
