@@ -7,7 +7,8 @@
     $(document).ready(function () {
 
         // Select all links with hashes
-        $('a[href*="#"]')
+        // changed from # to #section-contact-smooth does't work in combination with the popup management
+        $('a[href*="#section-contact-smooth"]')
         // Remove links that don't actually link to anything
             .not('[href="#"]')
             .not('[href="#0"]')
