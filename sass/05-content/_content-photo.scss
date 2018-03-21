@@ -14,7 +14,7 @@
 
   // views-view-unformatted--photo-albums.html.twig
   &__view-row {
-    flex: 0 0 24%;
+    flex: 0 0 25vw;
     padding: 2rem;
 
     &:hover {
@@ -23,11 +23,11 @@
       box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
     }
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       flex: 0 0 49%;
     }
 
-    @include respond(smallest-phone) {
+    @include respond(small-phone) {
       flex: 0 0 99%;
     }
   }

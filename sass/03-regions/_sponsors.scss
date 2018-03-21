@@ -12,7 +12,7 @@
   &__view-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     @include respond(phone) {
       flex-direction: column;
@@ -21,7 +21,7 @@
   }
 
   &__view-item {
-    width: 32%;
+    width: 24%;
 
     @include respond(phone) {
       width: 100%;
@@ -44,10 +44,22 @@
     font-size: 2rem;
     color: $color-blackleather;
     line-height: 2;
-    transition: all .3s;
+    transition: color .3s;
 
     &:hover {
       color:$color-blue;
+    }
+  }
+
+  &__logos {
+    display: block;
+    margin-top: 3rem;
+    width: 70%;
+    transition: all .3s;
+    outline-offset: 1rem;
+
+    &:hover {
+      outline: 2px solid $color-red-saturat;
     }
   }
       
