@@ -55,11 +55,7 @@
     &__title-box {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 7rem 1fr;
-
-      @include respond(phone) {
-        grid-template-rows: 1fr 5rem 4fr;
-      }
+      grid-template-rows: 2fr 1fr 1fr;
     }
 
     &__title {
@@ -74,7 +70,8 @@
     &__slogan {
       grid-column: 1;
       grid-row: 2 / 3;
-      justify-self: end;
+      justify-self: center;
+
     }
 
     &__cta {
@@ -86,7 +83,7 @@
   }
 
   &__slogan {
-    background: $color-blue-saturat;
+    //background: $color-blue-saturat;
     color: $color-white;
     font-size: 2vw;
     padding: 3.5vw;
