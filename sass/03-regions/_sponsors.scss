@@ -3,68 +3,58 @@
 // ////////////////////////
 
 .sponsors {
-  //background-color: $color-platinum;
-  //margin: -10rem 0;
   padding: 14rem 0 20rem;
   min-height: 55rem;
 
-  // views-view--sponsors-names.html.twig
+  // views-view--region-sponsors.html.twig
   &__view-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    grid-gap: 2rem;
+    justify-content: stretch;
+  }
 
-    @include respond(phone) {
+  // templates/content/sponsors/node--sponsors--super-teaser.html.twig
+  &__superteaser {
+    &-inner {
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
     }
 
-  }
+    &-title {
+      display: block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      font-size: 2rem;
+      color: $color-blackleather;
+      line-height: 2;
+      transition: color .3s;
 
-  &__view-item {
-    width: 24%;
+      &:hover {
+        color:$color-red-saturat;
+      }
+    }
 
-    @include respond(phone) {
-      width: 100%;
+    &-logo {
+      display: block;
+      width: 70%;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
-  &__box {}
 
-  &__link {}
-
+  // templates/partials/front-page/sponsors.html.twig
   &__region-button {
     display: block;
     left: 50%;
     @include center('horizontal');
     margin-top: 5rem;
   }
-
-  &__item {
-    text-decoration: none;
-    font-size: 2rem;
-    color: $color-blackleather;
-    line-height: 2;
-    transition: color .3s;
-
-    &:hover {
-      color:$color-blue;
-    }
-  }
-
-  &__logos {
-    display: block;
-    margin-top: 3rem;
-    width: 70%;
-    transition: all .3s;
-    outline-offset: 1rem;
-
-    &:hover {
-      outline: 2px solid $color-red-saturat;
-    }
-  }
       
 }
-
-// for the logo on the node --sponsors--full.html.twig
-
-.logo__sponsor-thumbnail {}
