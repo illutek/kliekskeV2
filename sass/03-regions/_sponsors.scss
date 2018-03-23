@@ -9,7 +9,7 @@
   // views-view--region-sponsors.html.twig
   &__view-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     grid-gap: 2rem;
     justify-content: stretch;
   }
@@ -38,8 +38,6 @@
     }
 
     &-logo {
-      display: block;
-      width: 70%;
       transition: transform .3s;
 
       &:hover {
