@@ -11,6 +11,12 @@ animatestyle:
 colorboxjs:
   js:
     js/colorbox.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
 
 frontjs:
   js:
@@ -18,3 +24,9 @@ frontjs:
     js/wow-init.js: {}
     js/popup-close.js: {}
     js/smooth-scroll.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
