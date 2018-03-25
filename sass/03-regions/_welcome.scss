@@ -3,9 +3,7 @@
 // ////////////////////////
 
 .welcome {
-  //background: $color-platinum;
-  margin-top: -20vh;
-  padding: 26rem 0;
+  padding: 18rem 0 30rem;
 
   @include respond(tab-port) {
     margin-top: -13vh;

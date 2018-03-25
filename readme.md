@@ -1,6 +1,6 @@
 # 't Kliekske
 
-The idea was to set up my own grid (see below), but afterwards everything was converted to **FLEX**.
+The idea was to set up my own grid (see below), but afterwards everything was converted to **FLEX** and **CSS-Grid**.
 
 ## CUSTOM GRID 
 ``` scss
@@ -31,13 +31,16 @@ The idea was to set up my own grid (see below), but afterwards everything was co
 
 
 ## FLEX
-So no heavy css frame-work like Bootstrap for me.  
+So no heavy css frame-work like Bootstrap for me.
 https://www.w3schools.com/css/css3_flexbox.asp  
 The panels on the reaction page and the program page to give them the same height, 
 with Bootstrap I never managed to do that.  
 
 ## CSS-GRID
 The title region in the header with ccs-grid
+Some great youtube tutorials/channels  
+[Layout Land](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag/videos "Layout Land")
+[Rachel Andrew](https://www.youtube.com/channel/UCJ0_R6U3ZClQDGpVJNjuPAQ "Rachel Andrew")
  
 #### CSS-Grid beats Bootstrap
  https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
@@ -93,7 +96,7 @@ The font-weight set to 900 this because the icon is pro.
 ## COLORBOX 
 Drupal8 module is not responsief out of the box, the solution, an extra js file was added (js/colorbox.js).  
 1. Set up a library.  
-2. And add this only to the photos-page templates/content/photos/node--photos--full.html.twig  
+1. And add this only to the photos-page templates/content/photos/node--photos--full.html.twig  
 
 ``` yml
 colorboxjs:
