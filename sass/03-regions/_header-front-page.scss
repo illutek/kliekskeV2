@@ -18,14 +18,14 @@
   }
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8vw), 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8vw), 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
 
     @include respond(tab-port) {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
     }
-    margin-bottom: -8vw;
+    margin-bottom: -10vw;
   }
 
   @include respond(phone) {
