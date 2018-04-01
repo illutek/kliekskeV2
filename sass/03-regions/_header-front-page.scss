@@ -91,6 +91,10 @@
     justify-content: center;
     align-items: center;
 
+    @include respond(phone) {
+      font-size: 3vw;
+    }
+
     @include respond(small-phone) {
       display: none;
     }

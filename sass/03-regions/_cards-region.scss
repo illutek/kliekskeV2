@@ -6,9 +6,9 @@
   margin-top: -12vh;
   padding: 20rem 0;
   background: linear-gradient(
-          to left bottom,
-          rgba($color-blue, .9),
-          rgba($color-blue-saturat, .9)),
+                  to left bottom,
+                  rgba($color-blue, .9),
+                  rgba($color-blue-saturat, .9)),
   url("../images/Henriette.jpg");
   background-size: cover;
   transform: skewY(-7deg);
@@ -16,18 +16,23 @@
   & > * {
     transform: skewY(7deg);
   }
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
 
-    @include respond(phone) {
-      flex-direction: column;
+  &__wrapper {
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      grid-column-gap: 2rem;
+      justify-content: center;
+
+      @include respond(phone) {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+      }
     }
+
   }
 }
 
 .card {
-  width: 32%;
   background: rgba($color-white, .5);
   min-height: 45rem;
   padding: 3rem;

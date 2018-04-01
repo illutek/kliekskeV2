@@ -37,9 +37,10 @@ The panels on the reaction page and the program page to give them the same heigh
 with Bootstrap I never managed to do that.  
 
 ## CSS-GRID
-The title region in the header with ccs-grid
+The title region in the header, the cards-region and the sponsors in the
+ sponsors-region and in the footer with ccs-grid.  
 Some great youtube tutorials/channels  
-[Layout Land](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag/videos "Layout Land")
+[Layout Land](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag/videos "Layout Land")  
 [Rachel Andrew](https://www.youtube.com/channel/UCJ0_R6U3ZClQDGpVJNjuPAQ "Rachel Andrew")
  
 #### CSS-Grid beats Bootstrap
@@ -62,10 +63,10 @@ With css no JS
 
 ``` scss
 &__checkbox:checked ~ &__nav {
-     opacity: 1;
-     width: 100%;
-     right: 0;
-   }
+  opacity: 1;
+  width: 100%;
+  right: 0;
+}
 ```
 
 ## Font Awesome 5
@@ -149,19 +150,19 @@ Copy to kliekske/templates/navigation and rename to menu--main.html.twig
 Here the customized code.
 ```twig
 {% import _self as menus %}
-    {% if items %}
-        <ul{{ attributes.addClass('navigation__list') }}>
-            {% for item in items %}
-                {% set classes = [
-                    'navigation__item',
-                    item.in_active_trail ? 'navigation__item--active-trail',
-                ] %}
-                <li{{ item.attributes.addClass(classes) }}>
-                    {{ link(item.title, item.url, { class: ['navigation__link'] }) }}
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+  {% if items %}
+    <ul{{ attributes.addClass('navigation__list') }}>
+      {% for item in items %}
+        {% set classes = [
+          'navigation__item',
+            item.in_active_trail ? 'navigation__item--active-trail',
+            ] %}
+              <li{{ item.attributes.addClass(classes) }}>
+                {{ link(item.title, item.url, { class: ['navigation__link'] }) }}
+              </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 ```
 The most special part is to add a class to the a tag.  
 ```twig
