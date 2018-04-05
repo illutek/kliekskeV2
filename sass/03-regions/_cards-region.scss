@@ -33,6 +33,11 @@
 }
 
 .card {
+  margin-bottom: 2rem;
+  @supports (display: grid) {
+    margin-bottom: 0;
+  }
+
   background: rgba($color-white, .5);
   min-height: 45rem;
   padding: 3rem;

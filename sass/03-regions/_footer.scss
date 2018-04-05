@@ -15,46 +15,54 @@
 
   &__left {
     width: 48%;
-    display: grid;
-    grid-template-columns: 9vw 1fr 9vw;
-    grid-template-rows: 1fr 15vw 14vw;
-    text-align: center;
-
-    @include respond(phone) {
-      width: 95%;
-      grid-template-columns: 17vw 1fr 17vw;
-      grid-template-rows: 1fr 27vw 28vw;
-    }
-
-    @include respond(smallest-phone) {
-      grid-template-rows: 1fr 27vw 30vw;
-    }
 
     &-bcg-image {
-      grid-column: 1 / span 3;
-      grid-row: 1 / span 3;
-      align-self: end;
+      display: none;
     }
 
-    &__msg {
-      grid-column: 2;
-      grid-row: 2;
-      justify-content: center;
-      align-self: start;
-      font-size: 2vw;
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 9vw 1fr 9vw;
+      grid-template-rows: 1fr 15vw 14vw;
+      text-align: center;
 
       @include respond(phone) {
-        font-size: 5vw;
+        width: 95%;
+        grid-template-columns: 17vw 1fr 17vw;
+        grid-template-rows: 1fr 27vw 28vw;
       }
-    }
 
-    &__footnote {
-      grid-column: 2;
-      grid-row: 3;
-      align-self: start;
+      @include respond(smallest-phone) {
+        grid-template-rows: 1fr 27vw 30vw;
+      }
 
-      display: flex;
-      justify-content: space-between;
+      &-bcg-image {
+        display: block;
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+        align-self: end;
+      }
+
+      &__msg {
+        grid-column: 2;
+        grid-row: 2;
+        justify-content: center;
+        align-self: start;
+        font-size: 2vw;
+
+        @include respond(phone) {
+          font-size: 5vw;
+        }
+      }
+
+      &__footnote {
+        grid-column: 2;
+        grid-row: 3;
+        align-self: start;
+
+        display: flex;
+        justify-content: space-between;
+      }
     }
 
     &__social {
@@ -86,9 +94,11 @@
 
   // class added on views-view--sponsors-footer.html.twig
   &__sponsors__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+    }
   }
 
   &__sponsors-field {
