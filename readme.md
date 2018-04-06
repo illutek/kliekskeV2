@@ -59,7 +59,7 @@ For Drupal i've raised that a level up by converting almost all views to twig fi
 
 
 ## Navigation
-With css no JS
+Displaying the main-menu with css no JS, the menu-items = main-navigation 
 
 ``` scss
 &__checkbox:checked ~ &__nav {
