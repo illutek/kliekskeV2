@@ -59,7 +59,7 @@ For Drupal i've raised that a level up by converting almost all views to twig fi
 
 
 ## Navigation
-Displaying the main-menu with css no JS, the menu-items = main-navigation 
+Displaying the main-menu with CSS no JS, the menu-items = Drupal's main-navigation 
 
 ``` scss
 &__checkbox:checked ~ &__nav {
@@ -68,6 +68,20 @@ Displaying the main-menu with css no JS, the menu-items = main-navigation
   right: 0;
 }
 ```
+The centering of the navigation list-items on .navigation__nav with a mixin called 
+@mixin center($position)  
+
+The general sibling combinator (~) separates two selectors and matches the second 
+element only if it follows the first element (though not necessarily 
+immediately), and both are children of the same parent element.  
+
+The adjacent sibling combinator (+) separates two selectors and matches the second 
+element only if it immediately follows the first element, and both are children of 
+the same parent element.  
+
+The child combinator (>) is placed between two CSS selectors. It matches only those 
+elements matched by the second selector that are the children of elements matched by 
+the first.
 
 ## Font Awesome 5
 Not all icons come are free disadvantage is if you want to set up your own classes as follows.   
