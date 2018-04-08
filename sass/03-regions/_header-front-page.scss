@@ -55,12 +55,12 @@
     &__title-box {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-rows: auto 10vh auto;
     }
 
     &__title {
       grid-column: 1;
-      grid-row: 1 / 3;
+      grid-row: 1 / 2;
 
       @include respond(smallest-phone) {
         align-self: start;
@@ -86,7 +86,6 @@
     //background: $color-blue-saturat;
     color: $color-white;
     font-size: 2vw;
-    padding: 3.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
