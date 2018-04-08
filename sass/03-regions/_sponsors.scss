@@ -9,9 +9,8 @@
   // views-view--region-sponsors.html.twig
   &__view-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(220px, auto));
     grid-gap: 2rem;
-    justify-content: stretch;
   }
 
   // templates/content/sponsors/node--sponsors--super-teaser.html.twig
