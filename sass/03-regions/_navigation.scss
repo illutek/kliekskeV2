@@ -74,6 +74,25 @@
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
+  &__title {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    font-size: 10rem;
+    color: $color-white;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
+  }
+
+  //menu--main.html.twig
   &__list {
     @include center(both);
       list-style: none;

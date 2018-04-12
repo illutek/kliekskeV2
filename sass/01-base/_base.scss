@@ -32,6 +32,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem;
+  overflow-x: hidden;
 
   @include respond(phone) {
     padding: 0;
