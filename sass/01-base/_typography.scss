@@ -13,10 +13,11 @@ body {
 }
 
 p {
-  &:not(:last-child) {
     margin-bottom: 1.5rem;
-  }
+}
 
+strong {
+  font-weight: 700;
 }
 
 .heading-primary {
