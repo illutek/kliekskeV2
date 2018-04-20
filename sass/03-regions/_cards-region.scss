@@ -20,7 +20,7 @@
   &__wrapper {
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, minmax(165px, 1fr));
       grid-column-gap: 2rem;
       justify-content: center;
 

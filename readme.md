@@ -182,3 +182,11 @@ The most special part is to add a class to the a tag.
 ```twig
 { class: ['navigation__link'] }
 ```
+
+## Development
+### Theme
+1. Clone this repository.
+2. Run 'npm install' (you might need to install node/npm first)
+3. Run 'bower install'
+4. Run 'gulp' in the terminal
+5. That's all
