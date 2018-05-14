@@ -74,7 +74,7 @@
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 60vh 30vh;
+    grid-template-rows: 20vh 60vh 20vh;
   }
 
   &__title {
@@ -134,12 +134,12 @@
   &__items {
     grid-column: 2;
     grid-row: 2;
-    align-self: auto;
+    align-self: center;
   }
 
   //menu--main.html.twig
   &__list {
-    @include center(both);
+    // @include center(both);
       list-style: none;
       text-align: center;
 
