@@ -74,24 +74,67 @@
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 60vh 30vh;
   }
 
   &__title {
-    position: absolute;
-    top: 5rem;
-    left: 5rem;
     font-size: 10rem;
     color: $color-white;
+    padding: 3rem;
+    grid-column: 1 / -1;
 
     @include respond(tab-port) {
-      top: 4rem;
-      right: 4rem;
     }
 
     @include respond(phone) {
-      top: 3rem;
-      right: 3rem;
+      font-size: 5rem;
     }
+  }
+
+
+  &__privacy {
+    transform: rotate(-90deg);
+    grid-column: 1 / 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: left;
+    padding: 0 3rem;
+
+    &__link {
+      color: rgba($color-white, .5);
+      position: relative;
+      text-transform: uppercase;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border: dashed 1px;
+        top: 3.5rem;
+        left: -3rem;
+        width: 12rem;
+
+        @include respond(phone) {
+          top: -1.5rem;
+        }
+      }
+
+      &:hover {
+        color: $color-red-saturat;
+      }
+    }
+
+    @include respond(phone) {
+      transform: rotate(0deg);
+      align-self: end;
+      justify-self: center;
+      grid-column: 2;
+    }
+  }
+
+  &__items {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: auto;
   }
 
   //menu--main.html.twig
@@ -128,6 +171,9 @@
          display: inline-block;
        }
 
+       @include respond(phone) {
+        padding: 0.5rem 5rem;
+       }
        @include respond(smallest-phone) {
          font-size: 2rem;
        }

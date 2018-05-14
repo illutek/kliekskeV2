@@ -19,10 +19,14 @@
     </div>
 
     <div class="navigation__privacy">
-      Privacy
+      <a href="{{ base_path }}privacy-verklaring" class="navigation__privacy__link"> {{ "Privacy"|t }}</a>
     </div>
+
+    <div class="navigation__items">
     {#menu--main.html.twig#}
       {{ page.navigation }}
+    </div>
+    
 
   </nav>
 
