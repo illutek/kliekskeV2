@@ -47,7 +47,7 @@ Some great youtube tutorials/channels
  https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 
 ### Webtechnologies
-- **Yarn** FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT, for devDependencies primarily for gulp.
+- **NPM** FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT, for devDependencies primarily for gulp.
 - **Bower** for the theme Dependencies
 for this theme Font-awesome 5, wowjs and animate.css
 - **Sass** is the most mature, stable, and powerful professional grade CSS extension language in the world.
@@ -68,8 +68,7 @@ Displaying the main-menu with CSS no JS, the menu-items = Drupal's main-navigati
   right: 0;
 }
 ```
-The centering of the navigation list-items on .navigation__nav with a mixin called 
-@mixin center($position)  
+The centering of the navigation list-items on .navigation__nav with css-grid.  
 
 The general sibling combinator (~) separates two selectors and matches the second 
 element only if it follows the first element (though not necessarily 
@@ -143,7 +142,7 @@ frontjs:
 {{ attach_library('kliekske/wowjs') }}
 {{ attach_library('kliekske/animatestyle') }}
 ```
-* js/popup-close.js = close the popup 'Bestuur' after click on the body-background
+* js/popup-close.js = close the popup 'Bestuur' when clicked on the body-background
 
 ## Drupal main-menu
 Convert hard-coded menu to Drupal main-menu, below the hard-coded menu
