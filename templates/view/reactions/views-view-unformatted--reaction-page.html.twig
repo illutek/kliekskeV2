@@ -31,10 +31,19 @@
     </div>
 {% endfor %}
 
-
+{# 
+/**
+ * Add btn reaction on the same level as the views-row reactions
+ * flex-items
+ */
+#}
 <div class="reaction__add-btn">
-    <p>Jouw reactie hier, deze wordt geplaatst na goedkeuring van de site veranwoordelijke.<br>
-        Dit om spamberichten te verkomen.</p>
-    <a href="{{ base_path }}node/add/reactions" class="btn btn--yellow">Reactie toevoegen</a>
+    <p>
+      {{ "Jouw reactie hier, deze wordt geplaatst na goedkeuring van de site veranwoordelijke."|t }}<br>{{ "Dit om spamberichten te verkomen."|t }}
+    </p>
+
+    <a href="{{ base_path }}node/add/reactions" class="btn btn--yellow">
+    {{ "Reactie toevoegen"|t }}
+    </a>
 </div>
 

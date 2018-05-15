@@ -50,6 +50,13 @@
     }
   }
 
+  &__teaser-content {
+    padding: 0 3rem;
+
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
 
   &__footer {}
 
