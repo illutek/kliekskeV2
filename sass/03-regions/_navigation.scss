@@ -79,6 +79,7 @@
 
   &__title {
     font-size: 10rem;
+    text-transform: uppercase;
     color: $color-white;
     padding: 3rem;
     grid-column: 1 / -1;
@@ -139,7 +140,6 @@
 
   //menu--main.html.twig
   &__list {
-    // @include center(both);
       list-style: none;
       text-align: center;
 
