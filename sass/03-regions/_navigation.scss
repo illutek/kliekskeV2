@@ -72,17 +72,31 @@
     opacity: 0;
     width: 0;
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 20vh 60vh 20vh;
+    grid-template-areas: 
+      "title title title"
+      ". nav ."
+      "privacy . .";
+
+      @include respond(phone) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+          "title"
+          "nav"
+          "privacy";
+      }
   }
 
   &__title {
+    grid-area: title;
+
     font-size: 10rem;
     text-transform: uppercase;
     color: $color-white;
     padding: 3rem;
-    grid-column: 1 / -1;
 
     @include respond(tab-port) {
     }
@@ -94,9 +108,9 @@
 
 
   &__privacy {
+    grid-area: privacy;
+
     transform: rotate(-90deg);
-    grid-column: 1 / 2;
-    grid-row: 3;
     align-self: center;
     justify-self: left;
     padding: 0 3rem;
@@ -128,14 +142,13 @@
       transform: rotate(0deg);
       align-self: end;
       justify-self: center;
-      grid-column: 2;
     }
   }
 
   &__items {
-    grid-column: 2;
-    grid-row: 2;
+    grid-area: nav;
     align-self: center;
+    justify-self: center;
   }
 
   //menu--main.html.twig
