@@ -60,15 +60,16 @@
       {% endfor %}
     </div>
   {% else %}
-    {% for item in items %}
 
-    <h4 class="heading-fourth">
-      <div{{ attributes.addClass(classes, 'field__item reaction__name icon--user') }}>
-        {{ item.content }}
-      </div>
-    </h4>  
-        
+    {% for item in items %}
+      {# icons on 01-base/_font-awesome.scss #}
+      <h4 class="heading-fourth">
+        <div{{ attributes.addClass(classes, 'field__item reaction__name icon--user') }}>
+          {{ item.content }}
+        </div>
+      </h4>  
     {% endfor %}
+
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>

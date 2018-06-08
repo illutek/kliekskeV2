@@ -15,10 +15,14 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+
 {% if title %}
     <h3>{{ title }}</h3>
 {% endif %}
+
+{# reaction__item, panel, panel--yellow, panel--hover #} 
 {% for row in rows %}
+
     {% set row_classes = [
         'reaction__item',
         'panel',
@@ -26,9 +30,11 @@
         'panel--hover',
         default_row_class ? 'views-row',
     ] %}
+
     <div{{ row.attributes.addClass(row_classes) }}>
         {{ row.content }}
     </div>
+    
 {% endfor %}
 
 {# 

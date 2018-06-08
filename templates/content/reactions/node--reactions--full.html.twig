@@ -84,16 +84,20 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-<div class="reaction__box--full">
+{# content reaction panel #}
+  <div class="reaction__box--full">
 
+    {# title of the reaction #}
     <h3{{ title_attributes.addClass('heading-tertiary') }}>
       {{ label }}
     </h3>
 
-  <div{{ content_attributes }}>
-    {{ content }}
+    {# icon--user before field_naam on field--node--field-naam--reactions.html.twig #}
+    <div{{ content_attributes }}>
+      {{ content }}
+    </div>
+
   </div>
-</div>
- {#The add reaction btn added to views-view-unformatted-reaction-page.html.twig#}
+ {# The add reaction btn added to views-view-unformatted-reaction-page.html.twig #}
 
 </article>

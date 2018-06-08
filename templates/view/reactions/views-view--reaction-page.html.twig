@@ -40,6 +40,7 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+{# added BEM block reactions #}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if title %}
@@ -61,7 +62,7 @@
       {{ attachment_before }}
     </div>
   {% endif %}
-
+  {# added the class row and BEM element class __view-content #}
   {% if rows %}
     <div class="view-content row reaction__view-content">
       {{ rows }}
