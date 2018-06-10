@@ -20,7 +20,7 @@
     <h3>{{ title }}</h3>
 {% endif %}
 
-{# reaction__item, panel, panel--yellow, panel--hover #} 
+{# reaction__item, panel, panel--yellow, panel--hover #}
 {% for row in rows %}
 
     {% set row_classes = [
@@ -34,7 +34,7 @@
     <div{{ row.attributes.addClass(row_classes) }}>
         {{ row.content }}
     </div>
-    
+
 {% endfor %}
 
 {# 
@@ -45,11 +45,10 @@
 #}
 <div class="reaction__add-btn">
     <p>
-      {{ "Jouw reactie hier, deze wordt geplaatst na goedkeuring van de site veranwoordelijke."|t }}<br>{{ "Dit om spamberichten te verkomen."|t }}
+        {{ "Jouw reactie hier, deze wordt geplaatst na goedkeuring van de site veranwoordelijke."|t }}<br>{{ "Dit om spamberichten te verkomen."|t }}
     </p>
 
     <a href="{{ base_path }}node/add/reactions" class="btn btn--yellow">
-    {{ "Reactie toevoegen"|t }}
+        {{ "Reactie toevoegen"|t }}
     </a>
 </div>
-

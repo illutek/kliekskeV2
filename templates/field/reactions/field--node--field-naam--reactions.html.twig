@@ -53,35 +53,35 @@
 %}
 
 {% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items') }}>
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      {% endfor %}
-    </div>
-  {% else %}
-
-    {% for item in items %}
-      {# icons on 01-base/_font-awesome.scss #}
-      <h4 class="heading-fourth">
-        <div{{ attributes.addClass(classes, 'field__item reaction__name icon--user') }}>
-          {{ item.content }}
+    {% if multiple %}
+        <div{{ attributes.addClass(classes, 'field__items') }}>
+            {% for item in items %}
+                <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+            {% endfor %}
         </div>
-      </h4>  
-    {% endfor %}
+    {% else %}
 
-  {% endif %}
+        {% for item in items %}
+            {# icons on 01-base/_font-awesome.scss #}
+            <h4 class="heading-fourth">
+                <div{{ attributes.addclass(classes, 'field__item reaction__name icon--user') }}>
+                    {{ item.content }}
+                </div>
+            </h4>
+        {% endfor %}
+
+    {% endif %}
 {% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-      <div class="field__items">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-  </div>
+    <div{{ attributes.addClass(classes) }}>
+        <div{{ title_attributes.addclass(title_classes) }}>{{ label }}</div>
+        {% if multiple %}
+            <div class="field__items">
+            {% endif %}
+            {% for item in items %}
+                <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+            {% endfor %}
+            {% if multiple %}
+            </div>
+        {% endif %}
+    </div>
 {% endif %}

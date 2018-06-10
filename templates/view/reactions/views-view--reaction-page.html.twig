@@ -41,57 +41,57 @@
   ]
 %}
 {# added BEM block reactions #}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if title %}
-    {{ title }}
-  {% endif %}
-  {{ title_suffix }}
-  {% if header %}
-    <div class="view-header">
-      {{ header }}
-    </div>
-  {% endif %}
-  {% if exposed %}
-    <div class="view-filters">
-      {{ exposed }}
-    </div>
-  {% endif %}
-  {% if attachment_before %}
-    <div class="attachment attachment-before">
-      {{ attachment_before }}
-    </div>
-  {% endif %}
-  {# added the class row and BEM element class __view-content #}
-  {% if rows %}
-    <div class="view-content row reaction__view-content">
-      {{ rows }}
-    </div>
-  {% elseif empty %}
-    <div class="view-empty">
-      {{ empty }}
-    </div>
-  {% endif %}
+<div{{ attributes.addclass(classes) }}>
+    {{ title_prefix }}
+    {% if title %}
+        {{ title }}
+    {% endif %}
+    {{ title_suffix }}
+    {% if header %}
+        <div class="view-header">
+            {{ header }}
+        </div>
+    {% endif %}
+    {% if exposed %}
+        <div class="view-filters">
+            {{ exposed }}
+        </div>
+    {% endif %}
+    {% if attachment_before %}
+        <div class="attachment attachment-before">
+            {{ attachment_before }}
+        </div>
+    {% endif %}
+    {# added the class row and BEM element class __view-content #}
+    {% if rows %}
+        <div class="view-content row reaction__view-content">
+            {{ rows }}
+        </div>
+    {% elseif empty %}
+        <div class="view-empty">
+            {{ empty }}
+        </div>
+    {% endif %}
 
-  {% if pager %}
-    {{ pager }}
-  {% endif %}
-  {% if attachment_after %}
-    <div class="attachment attachment-after">
-      {{ attachment_after }}
-    </div>
-  {% endif %}
-  {% if more %}
-    {{ more }}
-  {% endif %}
-  {% if footer %}
-    <div class="view-footer">
-      {{ footer }}
-    </div>
-  {% endif %}
-  {% if feed_icons %}
-    <div class="feed-icons">
-      {{ feed_icons }}
-    </div>
-  {% endif %}
+    {% if pager %}
+        {{ pager }}
+    {% endif %}
+    {% if attachment_after %}
+        <div class="attachment attachment-after">
+            {{ attachment_after }}
+        </div>
+    {% endif %}
+    {% if more %}
+        {{ more }}
+    {% endif %}
+    {% if footer %}
+        <div class="view-footer">
+            {{ footer }}
+        </div>
+    {% endif %}
+    {% if feed_icons %}
+        <div class="feed-icons">
+            {{ feed_icons }}
+        </div>
+    {% endif %}
 </div>
