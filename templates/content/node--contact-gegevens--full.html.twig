@@ -70,53 +70,32 @@
  *   in different view modes.
  */
 #}
-{% set classes = [
+{%
+  set classes = [
     'node',
-    'content-page',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-] %}
+  ]
+%}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-    <div class="content-page__box">
-        <div class="u-text-center">
-            <h2{{ title_attributes.addClass('heading-secondary heading-secondary--skew') }}>
-                {{ label }}
-            </h2>
-        </div>
+<div class="content-page__box">
 
-        <div{{ content_attributes.addClass('row node-programma__box') }}>
-            {# node-programma__box is a flex-container #}
-            {% if content.field_poster[0] is not empty %}
-                <div class="node-programma__poster">
-                    {{ content.field_poster }}
-                </div>
-            {% endif %}
+  <div class="u-text-center">
+    <h2{{ title_attributes.addClass('heading-secondary heading-secondary--skew') }}>
+        {{ label }}
+    </h2>
+  </div>
 
-            <div class="node-programma__info">
-                {{ content.body }}
 
-                {{ content.field_bezetting }}
-
-            </div>
-
-            {% if content.field_url_photo_album[0] is not empty %}
-                <div class="node-programma__link">
-                    {{ content.field_url_photo_album }}
-                </div>                
-            {% endif %}
-
-        </div>
-
-        <div class="panel panel--red u-margin-top-big">
-            <a href="{{ base_path }}programma-overzicht">{{ "Naar het volledige programma overzicht" |t }}</a>
-        </div>
-
-    </div>
-
+  <div{{ content_attributes.addClass('row') }}>
+    {{ content }}
+  </div>
+</div>
+ 
 
 </article>

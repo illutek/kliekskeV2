@@ -5,7 +5,6 @@
 // Position of the Menu title, navigation and privacy link with css-grid
 
 .navigation {
-
   &__checkbox {
     display: none;
   }
@@ -18,7 +17,7 @@
     top: 6rem;
     right: 6rem;
     z-index: 190;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
 
@@ -46,7 +45,7 @@
     right: 6.5rem;
     background-image: radial-gradient($color-blue, $color-blue-saturat);
     z-index: 170;
-    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
     @include respond(tab-port) {
       top: 4.5rem;
@@ -62,7 +61,6 @@
       height: 4rem;
       width: 4rem;
     }
-
   }
 
   &__nav {
@@ -73,23 +71,25 @@
     z-index: 175;
     opacity: 0;
     width: 0;
-    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 20vh 60vh 20vh;
-    grid-template-areas: 
+    grid-template-areas:
       "title title title"
-      ". nav ."
+      "facebook nav ."
       "privacy . .";
 
-      @include respond(phone) {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-          "title"
-          "nav"
-          "privacy";
-      }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 20vh 70vh 5vh 5vh;
+      grid-template-areas:
+        "title"
+        "nav"
+        "privacy"
+        "facebook";
+    }
   }
 
   &__title {
@@ -108,44 +108,58 @@
     }
   }
 
-
   &__privacy {
     grid-area: privacy;
-
-    transform: rotate(-90deg);
-    align-self: center;
-    justify-self: left;
+    align-self: center;  
+    
     padding: 0 3rem;
+  }
 
-    &__link {
-      color: rgba($color-white, .5);
-      position: relative;
-      text-transform: uppercase;
+  &__facebook {
+    grid-area: facebook;
+    align-self: end;
 
-      &::after {
-        content: "";
-        position: absolute;
-        border: dashed 1px;
-        top: 3.5rem;
-        left: -3rem;
-        width: 12rem;
+    padding: 4rem 2.3rem;
 
-        @include respond(phone) {
-          top: -1.5rem;
-        }
-      }
-
-      &:hover {
-        color: $color-red-saturat;
-      }
+    @include respond(phone) {
+      align-self: center;
     }
+  }
+
+  &--rotate {
+    transform: rotate(-90deg);
+    justify-self: left;
 
     @include respond(phone) {
       transform: rotate(0deg);
-      align-self: end;
       justify-self: center;
     }
   }
+
+  &__link--not-nav {
+    color: rgba($color-white, 0.5);
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: dashed 1px;
+      top: 3.5rem;
+      left: -3rem;
+      width: 12rem;
+
+      @include respond(phone) {
+        border: none;
+      }
+    }
+
+    &:hover {
+      color: $color-red-saturat;
+    }
+  }
+
+
 
   &__items {
     grid-area: nav;
@@ -155,65 +169,69 @@
 
   //menu--main.html.twig
   &__list {
-      list-style: none;
-      text-align: center;
+    list-style: none;
+    text-align: center;
 
     @include respond(phone) {
       width: 80vw;
     }
-   }
- 
-   &__item {
-     margin: 1rem;
-   }
- 
-   &__link {
-     &:link,
-     &:visited {
-       display: inline-block;
-       font-size: 3rem;
-       font-weight: 100;
-       color: $color-white;
-       padding: 1rem 5rem;
-       text-decoration: none;
-       text-transform: uppercase;
-       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
-       background-size: 220%;
-       transition: all .3s;
- 
-       span {
-         margin-right: 1.5rem;
-         display: inline-block;
-       }
+  }
 
-       @include respond(phone) {
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 100;
+      color: $color-white;
+      padding: 1rem 5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 220%;
+      transition: all 0.3s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+
+      @include respond(phone) {
         padding: 0.5rem 5rem;
-       }
-       @include respond(smallest-phone) {
-         font-size: 2rem;
-       }
-     }
- 
-     &:hover,
-     &:active {
-       background-position: 100%;
-       color: $color-blackleather;
-       transform: translateX(1rem);
-     }
-   }
- 
-   &__checkbox:checked ~ &__background {
-     transform: scale(150);
-   }
- 
-   &__checkbox:checked ~ &__nav {
-     opacity: 1;
-     width: 100%;
-     right: 0;
-   }
+      }
+      @include respond(smallest-phone) {
+        font-size: 2rem;
+      }
+    }
 
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-blackleather;
+      transform: translateX(1rem);
+    }
+  }
 
-    // ICON
+  &__checkbox:checked ~ &__background {
+    transform: scale(150);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+    right: 0;
+  }
+
+  // ICON
   &__icon {
     position: relative;
     transform: translateY(3.5rem);
@@ -222,7 +240,6 @@
       transform: translateY(2.5rem);
     }
 
-
     &,
     &::before,
     &::after {
@@ -230,7 +247,7 @@
       height: 2px;
       background-color: $color-blackleather;
       display: inline-block;
-      transition: all .3s;
+      transition: all 0.3s;
     }
 
     &::before,
@@ -241,13 +258,12 @@
     }
 
     &::before {
-      top: -.8rem;
+      top: -0.8rem;
     }
 
     &::after {
-      top: .8rem;
+      top: 0.8rem;
     }
-
   }
 
   &__button:hover &__icon::before {
@@ -266,13 +282,11 @@
 
   &__checkbox:checked + &__button &__icon::before {
     transform: rotate(135deg);
-    top:  0;
+    top: 0;
   }
 
   &__checkbox:checked + &__button &__icon::after {
     transform: rotate(-135deg);
     top: 0;
-
   }
-
 }
