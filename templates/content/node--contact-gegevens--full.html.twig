@@ -73,7 +73,6 @@
 {%
   set classes = [
     'node',
-    'content-page',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -84,22 +83,18 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-<div class="content-page__box members__content--teaser">
+<div class="content-page__box">
 
-    <h4{{ title_attributes.addClass('heading-fourth heading-fourth--smaller') }}>
-      {{ label }}
-    </h4>
-
-  <div{{ content_attributes.addClass('members__teaser-img') }}>
-    {{ content.field_img_member }}
+  <div class="u-text-center">
+    <h2{{ title_attributes.addClass('heading-secondary heading-secondary--skew') }}>
+        {{ label }}
+    </h2>
   </div>
 
-  <div class="members__caption">
-    {{ content.field_leden_bijschrift }}
-  </div>
-    
- 
 
+  <div{{ content_attributes.addClass('row') }}>
+    {{ content }}
+  </div>
 </div>
  
 
