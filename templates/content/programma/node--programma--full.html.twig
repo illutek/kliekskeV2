@@ -104,6 +104,12 @@
 
             </div>
 
+            {% if content.field_url_photo_album[0] is not empty %}
+                <div class="node-programma__link">
+                    {{ content.field_url_photo_album }}
+                </div>                
+            {% endif %}
+
         </div>
 
         <div class="panel panel--red u-margin-top-big">

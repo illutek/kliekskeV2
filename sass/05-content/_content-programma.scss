@@ -6,15 +6,25 @@
 // node--programma--full.html.twig
 .node-programma {
   &__box {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+      "poster info"
+      "link .";
 
     @include respond(phone) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: 
+      "info"
+      "poster"
+      "link";
     }
   }
 
   &__poster {
-    width: 45%;
+    grid-area: poster;
 
     @include respond(phone) { //600px
       width: 100%;
@@ -24,7 +34,7 @@
   }
 
   &__info {
-    width: 55%;
+    grid-area: info;    
     padding-left: 3rem;
 
     @include respond(phone) { //600px
@@ -34,6 +44,14 @@
       padding-bottom: 3rem;
     }
 
+  }
+
+  &__link {
+    grid-area: link;
+    margin-top: 2rem;
+    a {
+      color: $color-white;
+    }
   }
 
 }
