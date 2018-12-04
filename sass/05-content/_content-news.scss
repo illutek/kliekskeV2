@@ -1,0 +1,49 @@
+// /////////////////////////
+// @@ NODE REACTIONS
+// ////////////////////////
+
+.news {
+  &__teaser {
+    //node--nieuws--teaser.html.twig
+    &-body {
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__full {
+
+    &-content {
+      margin-bottom: 2rem;
+    }
+
+    &-img {
+      float: left;
+      max-width: 50%;
+      margin-right: 2rem;
+
+      @include respond(phone) {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-body {
+
+    }
+  }
+
+}
+
+//views-view--newes.html.twig
+.news-view {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+}
