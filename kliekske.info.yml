@@ -13,6 +13,7 @@ regions:
   content: Content
   navigation: Navigation
   welcome: "Welkom tekst"
+  news: News
   sponsors: Sponsors
   program: Programma
   contact: "Contact region"
