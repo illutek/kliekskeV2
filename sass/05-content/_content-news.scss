@@ -3,7 +3,6 @@
 // ////////////////////////
 
 .news {
-
   &-region {
     // region home-page
     margin-bottom: 3rem;
@@ -15,7 +14,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-row-gap: 2rem;
-    
   }
 
   &__super-teaser {
@@ -26,14 +24,14 @@
     grid-template-columns: repeat(2, minmax(0rem, 1fr));
     grid-template-rows: repeat(2, auto);
     grid-column-gap: 3rem;
-    grid-template-areas: 
+    grid-template-areas:
       "title title"
       "body img";
 
     @include respond(phone) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, auto);
-      grid-template-areas: 
+      grid-template-areas:
         "title"
         "img"
         "body";
@@ -64,7 +62,6 @@
   }
 
   &__full {
-
     &-content {
       margin-bottom: 2rem;
     }
@@ -74,18 +71,35 @@
       max-width: 50%;
       margin-right: 2rem;
 
+      display: grid;
+      grid-template-columns: 1fr;
+
       @include respond(phone) {
         max-width: 100%;
         margin-right: 0;
         margin-bottom: 2rem;
       }
-    }
 
-    &-body {
+      &-first {
+        transition: all .3s;
 
+        &:hover {
+          transform: translateY(-1rem) scale(1.03);
+          box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      &-rest {
+        margin-top: 1rem;
+      }
     }
   }
 
+  &-field-items__wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+    grid-gap: 1rem;
+  }
 }
 
 //views-view--newes.html.twig
@@ -98,5 +112,4 @@
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
-
 }

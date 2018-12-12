@@ -92,10 +92,24 @@
     </h2>
   </div>
 
-
   <div{{ content_attributes.addClass('row news__full-content') }}>
-    <div class="news__full-img">{{ content.field_new_img }}</div>
-    <div class="news__full-body">{{ content.body }}</div> 
+
+    <div class="news__full-img">
+
+      <div class="news__full-img-first">
+        {{ content.field_news_img }}
+      </div>
+
+      <div class="news__full-img-rest">
+        {{ content.field_news_img_rest }}
+      </div>
+
+    </div>
+
+    <div class="news__full-body">
+      {{ content.body }}
+    </div> 
+
   </div>
 
   <div class="row">
