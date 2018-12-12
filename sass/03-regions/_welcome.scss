@@ -12,7 +12,7 @@
 
   @include respond(phone) {
     margin-top: -10vh;
-    padding: 14rem 0;
+    padding: 14rem 0 0;
   }
 
   &__box {

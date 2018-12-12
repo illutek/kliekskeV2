@@ -75,8 +75,7 @@
     'node',
     'panel',
     'panel--hover',
-    'panel--blue',
-    'news__super-teaser',
+    'panel--red',
     'u-margin-top-negative-fifteen',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -90,21 +89,29 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-<div class="content-page__box">
+<div class="news__super-teaser">
 
-  <div class="u-text-center">
+  <div class="u-text-center news-title">
     <h2{{ title_attributes.addClass('heading-secondary heading-secondary--skew') }}>
         {{ label }}
     </h2>
   </div>
 
-  <div{{ content_attributes.addClass('row news__teaser-body') }}>
-    {{ bodytext|length > 190 ? bodytext|slice(0, 190) ~ ' ...' : bodytext }}
+  <div{{ content_attributes.addClass('row news__super-teaser-body') }}>
+    <div class="">
+      {{ bodytext|length > 190 ? bodytext|slice(0, 190) ~ ' ...' : bodytext }}
+    </div>    
+
+    <div class="news-btn">
+      <a href="{{ url }}" class="btn btn--yellow">{{ "Lees verder" | t }}</a>
+    </div>
+
   </div>
   
-  <div class="row">
-    <a href="{{ url }}" class="btn btn--yellow">{{ "Lees verder" | t }}</a>
+  <div class="news-image">
+    {{ content.field_new_img }}
   </div>
+  
   
 </div>
  

@@ -3,11 +3,60 @@
 // ////////////////////////
 
 .news {
+
+  &-region {
+    // region home-page
+    margin-bottom: 3rem;
+  }
+
   &__teaser {
     //node--nieuws--teaser.html.twig
-    &-body {
-      padding-bottom: 3rem;
+    
+  }
+
+  &__super-teaser {
+    // display in the news-region on the home-page
+    margin-bottom: 9rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0rem, 1fr));
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 3rem;
+    grid-template-areas: 
+      "title title"
+      "body img";
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: 
+        "title"
+        "img"
+        "body";
+      grid-column-gap: 0;
+      grid-row-gap: 2rem;
     }
+
+    &-body {
+      padding-bottom: 0;
+      grid-area: body;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &-title {
+    grid-area: title;
+  }
+
+  &-btn {
+    align-self: end;
+  }
+
+  &-image {
+    grid-area: img;
   }
 
   &__full {
