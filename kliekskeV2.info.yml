@@ -1,13 +1,13 @@
-name: kliekske
+name: kliekskeV2
 type: theme
 description: 'Voor het toneel gezelschap het Kliekske'
 base theme: classy
 package: Custom
 core: 8.x
-version: 1.0.0
+version: 2.0.0
 libraries:
-  - kliekske/globalstyle
-  - kliekske/globaljs
+  - kliekskeV2/globalstyle
+  - kliekskeV2/frontjs
 
 regions:
   content: Content

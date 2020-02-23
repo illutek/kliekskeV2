@@ -1,0 +1,14 @@
+globalstyle:
+  css:
+    theme:
+      dist/css/styles.css: {}
+
+frontjs:
+  js:
+    dist/js/all.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

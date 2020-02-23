@@ -6,7 +6,7 @@
  * Time: 09:37
  */
 
- function kliekske_preprocess_page(array &$variables) {
+ function kliekskeV2_preprocess_page(array &$variables) {
 
    // Load the site name and slogan out of configuration.
    $config = \Drupal::config('system.site');
