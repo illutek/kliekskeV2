@@ -3,13 +3,97 @@
 // ///////////////////////
 
 .news {
+	&__full {
+		margin-bottom: 15rem;
+	}
 
-  border-bottom: 1px solid $color-blackleather;
-  padding-bottom: 3rem;
+	&__full-content {
+		margin-bottom: 3rem;
+	}
 
-  &__img {
-    max-width: 40rem;
-    float: left;
-    margin: 0 2.5rem 2rem 0;
-  }
+	&__full-img {
+		float: left;
+		max-width: 50%;
+		margin-right: 2rem;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include respond(tab-port) {
+			float: none;
+			max-width: 100%;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__full-img-first {
+		-webkit-transition: all .3s;
+		transition: all .3s;
+
+		&:hover {
+			transform: translateY(-1rem) scale(1.03);
+			box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .1);
+		}
+	}
+
+	&__full-img-rest {
+		margin-top: 1rem;
+	}
+
+	&__img {
+		margin-bottom: 3rem;
+	}
+
+	&-view {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2rem;
+
+		@include respond(tab-port) {
+			display: block;
+		}
+	}
+
+	&-field-items__wrap {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+		grid-gap: 1rem;
+	}
+
+	&__super-teaser {
+		margin-bottom: 9rem;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-rows: repeat(2, auto);
+		grid-column-gap: 3rem;
+		grid-template-areas: "title title" "body img";
+
+		@include respond(phone) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, auto);
+			grid-template-areas: "title" "img" "body";
+			grid-column-gap: 0;
+			grid-row-gap: 2rem;
+		}
+	}
+
+	&__super-teaser-body {
+		padding-bottom: 0;
+		grid-area: body;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	&-title {
+		grid-area: title;
+	}
+
+	&-btn {
+		-ms-flex-item-align: end;
+		align-self: end;
+	}
+
+	&-image {
+		grid-area: img;
+	}
 }

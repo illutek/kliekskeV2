@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ * sass - 05-content/_content-news.scss
+ *
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'panel',
+    'panel--hover',
+    'panel--red',
+    'u-margin-top-negative-fifteen',
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{% set bodytext = content.body|render|striptags %}
+
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <div class="news__super-teaser">
+
+    <div class="u-text-center news-title">
+      <h2{{ title_attributes.addClass('heading-secondary heading-secondary--skew') }}>
+          {{ label }}
+      </h2>
+    </div>
+
+    <div{{ content_attributes.addClass('row news__super-teaser-body') }}>
+      <div class="">
+        {{ bodytext|length > 190 ? bodytext|slice(0, 190) ~ ' ...' : bodytext }}
+      </div>    
+
+      <div class="news-btn">
+        <a href="{{ url }}" class="btn btn--yellow">{{ "Lees verder" | t }}</a>
+      </div>
+
+    </div>
+    
+    <div class="news-image">
+      {{ content.field_news_img.0 }}
+    </div>
+    
+  </div>
+ 
+</article>

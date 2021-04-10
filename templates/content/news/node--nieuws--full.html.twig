@@ -73,8 +73,8 @@
 {%
   set classes = [
     'node',
-    'news',
-    'content-page--superteaser',
+    'news__full',
+    'content-page',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -83,23 +83,39 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{attributes.addClass(classes)}}>
+<article{{ attributes.addClass(classes) }}>
 
-	
-		<h3{{title_attributes.addClass('heading-secondary')}}>
-			{{ label }}
-		</h3>
+<div class="content-page__box">
 
-		{% if content.field_news_img[0] is not empty %}
-			<div class="news__img">
-				{{ content.field_news_img }}
-			</div>
+  <div class="u-text-center">
+    <h2{{ title_attributes.addClass('heading-secondary heading-secondary--skew') }}>
+        {{ label }}
+    </h2>
+  </div>
 
-		{% endif %}
+  <div{{ content_attributes.addClass('news__full-content') }}>
 
-		<div{{content_attributes.addClass('')}}>
-			{{ content.body }}
-		</div>
-		<a href="{{ url }}" class="btn btn--blue">{{ "Lees verder"|t }}</a>
+    <div class="news__full-img">
+
+      <div class="news__full-img-first">
+        {{ content.field_news_img }}
+      </div>
+
+      <div class="news__full-img-rest">
+        {{ content.field_news_img_rest }}
+      </div>
+
+    </div>
+
+    <div class="news__full-body">
+      {{ content.body }}
+    </div> 
+
+  </div>
+
+    <a href="{{ base_path }}nieuws" class="btn btn--yellow">{{ 'Naar nieuws overzicht' | t }}</a>
+
+</div>
+ 
 
 </article>
