@@ -81,23 +81,25 @@
 ] %}
 {{ attach_library('classy/node') }}
 {{ attach_library('kliekske/colorboxjs') }}
-<article{{ attributes.addClass(classes) }}>
+<article{{attributes.addClass(classes)}}>
 
-    <div class="photos__box--full">
+	<div class="photos__box--full">
 
-        <h3{{ title_attributes.addClass('heading-tertiary') }}>
-            {{ label }}
-        </h3>
+		<h3{{title_attributes.addClass('heading-tertiary')}}>
+			{{ label }}
+		</h3>
 
-        <div class="photos__content--intro panel panel--yellow">
-            {{ content.field_msg_photo }}
-        </div>
+		{% if content.field_msg_photo[0] is not empty %}
+			<div class="photos__content--intro panel panel--yellow">
+				{{ content.field_msg_photo }}
+			</div>
+		{% endif %}
 
-        <div{{ content_attributes.addClass('photos__content--img') }}>
-            {{ content.field_photos }}
-        </div>
-        <a href="{{ base_path }}photo-albums" class="btn btn--blue u-margin-top-big">Naar foto albums</a>
-    </div>
+		<div{{content_attributes.addClass('photos__content--img')}}>
+			{{ content.field_photos }}
+		</div>
+		<a href="{{ base_path }}photo-albums" class="btn btn--blue u-margin-top-big">Naar foto albums</a>
+	</div>
 
 
 </article>
